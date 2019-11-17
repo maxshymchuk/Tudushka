@@ -1,5 +1,4 @@
 import '../styles/editor.css';
-import { throws } from 'assert';
 import { ItemType } from './GridItem';
 
 export class Editor {
