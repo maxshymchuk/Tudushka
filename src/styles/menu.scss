@@ -1,0 +1,17 @@
+@import 'variables.scss';
+
+.menu {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  padding: 10px;
+  background-color: var(--menu-color);
+  border-radius: var(--border-radius);
+  font-size: 0;
+  button {
+    font-size: 1rem;
+  }
+  button:not(:last-child) {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,62 @@
+:root {
+  --border-radius: 10px;
+  --button-border-radius: 5px;
+  --grid-gap: 20px;
+  --box-shadow: 0 0 20px 0 var(--box-shadow-color);
+  --box-shadow-color: #AAA;
+  --hover-button-color: rgba(0, 0, 0, 0.1);
+  --inactive-background-color: rgba(255, 255, 255, 0.75);
+  --menu-color: #DDD;
+  --menu-button-color: #EEE;
+  --menu-button-hover-color: #EAEAEA;
+  --folder-color: #EEE;
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  padding: 70px 20px;
+  margin: 20px 0;
+  grid: 240px/repeat(auto-fill, 200px);
+  grid-gap: var(--grid-gap);
+  user-select: none;
+}
+.grid .item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 240px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.grid .item.folder {
+  box-sizing: border-box;
+  padding: 10px;
+  justify-content: flex-end;
+  text-align: center;
+  background: url("https://image.flaticon.com/icons/svg/148/148953.svg") no-repeat center center var(--folder-color);
+  background-size: 60%;
+}
+.grid .item.note .title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #000;
+}
+.grid .item.note .content {
+  height: auto;
+  padding: 10px;
+  overflow: hidden;
+}
+.grid .item.note .footer {
+  margin-top: auto;
+  text-align: right;
+}
+.grid .item.note .footer span {
+  display: inline-block;
+  padding: 2px 20px;
+  cursor: pointer;
+}

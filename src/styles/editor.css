@@ -1,0 +1,106 @@
+.editor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: var(--inactive-background-color);
+  overflow-y: auto;
+}
+.editor .note {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding-top: 80px;
+  box-shadow: var(--box-shadow);
+}
+.editor .note .controls {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 900px;
+  background-color: #FFF;
+  box-shadow: 0 4px 8px -2px var(--box-shadow-color);
+}
+.editor .note .controls .close,
+.editor .note .controls .submit {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.editor .note .controls .close:hover,
+.editor .note .controls .submit:hover {
+  background-color: var(--hover-button-color);
+}
+.editor .note .controls .close {
+  background: url("https://image.flaticon.com/icons/svg/1632/1632600.svg") no-repeat center center;
+  background-size: 50%;
+}
+.editor .note .controls .submit {
+  background: url("https://image.flaticon.com/icons/svg/1632/1632596.svg") no-repeat center center;
+  background-size: 50%;
+}
+.editor .note .controls .input__note_title {
+  width: 100%;
+  line-height: 40px;
+  padding: 0 20px;
+  font-size: 1.2rem;
+  border: 0;
+}
+.editor .note .textarea__note_content {
+  display: block;
+  width: 100%;
+  height: 2000px;
+  box-sizing: border-box;
+  resize: none;
+  border: 0;
+  padding: 20px;
+}
+.editor .folder {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: 20%;
+  width: 60%;
+  box-shadow: var(--box-shadow);
+}
+.editor .folder .controls {
+  display: flex;
+  background-color: #FFF;
+  box-shadow: 0 4px 8px -2px var(--box-shadow-color);
+}
+.editor .folder .controls .close,
+.editor .folder .controls .submit {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.editor .folder .controls .close:hover,
+.editor .folder .controls .submit:hover {
+  background-color: var(--hover-button-color);
+}
+.editor .folder .controls .close {
+  background: url("https://image.flaticon.com/icons/svg/1632/1632600.svg") no-repeat center center;
+  background-size: 10%;
+}
+.editor .folder .controls .submit {
+  background: url("https://image.flaticon.com/icons/svg/1632/1632596.svg") no-repeat center center;
+  background-size: 10%;
+}
+.editor .folder .input__folder_title {
+  width: 100%;
+  line-height: 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  border: 0;
+}

@@ -1,0 +1,30 @@
+input[type="button"].custom,
+button.custom {
+  border-radius: var(--button-border-radius);
+  border: 0;
+  background-color: var(--menu-button-color);
+  margin: 0;
+  padding: 5px 10px;
+  line-height: 20px;
+  cursor: pointer;
+  &.menu__create_note:before,
+  &.menu__create_folder:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 5px;
+  }
+  &.menu__create_note:before {
+    background: url("https://image.flaticon.com/icons/svg/14/14862.svg") no-repeat center center;
+    background-size: 80%;
+  }
+  &.menu__create_folder:before {
+    background: url("https://image.flaticon.com/icons/svg/2088/2088592.svg") no-repeat center center;
+    background-size: 80%;
+  }
+  &:hover {
+    background-color: var(--menu-button-hover-color);
+  }
+}
