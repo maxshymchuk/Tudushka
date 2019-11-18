@@ -4,9 +4,9 @@ html {
   }
   *::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: darkgrey;
+    background-color: transparent;
     box-sizing: border-box;
-    border: 2px solid #FFF;
+    border: 2px solid rgba(0, 0, 0, 0.2);
   }
 }
 

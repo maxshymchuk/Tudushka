@@ -18,11 +18,11 @@
     margin-right: 5px;
   }
   &.menu__create_note:before {
-    background: url('https://image.flaticon.com/icons/svg/14/14862.svg') no-repeat center center;
+    background: url('../images/create_note.svg') no-repeat center center;
     background-size: 80%;
   }
   &.menu__create_folder:before {
-    background: url('https://image.flaticon.com/icons/svg/2088/2088592.svg') no-repeat center center;
+    background: url('../images/create_folder.svg') no-repeat center center;
     background-size: 80%;
   }
   &:hover {
@@ -40,11 +40,11 @@
   white-space: nowrap;
   cursor: pointer;
   &.submit {
-    background: url('https://image.flaticon.com/icons/svg/1632/1632596.svg') no-repeat center center;
+    background: url('../images/submit.svg') no-repeat center center;
     background-size: 50%;
   }
   &.reject {
-    background: url('https://image.flaticon.com/icons/svg/1632/1632600.svg') no-repeat center center;
+    background: url('../images/reject.svg') no-repeat center center;
     background-size: 50%;
   }
   &:hover {

@@ -10,6 +10,7 @@
   --menu-button-color: #eee;
   --menu-button-hover-color: #eaeaea;
   --folder-color: #eee;
+  --folder-hover-color: #ddd;
 }
 
 :root {
@@ -24,6 +25,7 @@
   --menu-button-color: #eee;
   --menu-button-hover-color: #eaeaea;
   --folder-color: #eee;
+  --folder-hover-color: #ddd;
 }
 
 .menu {
@@ -55,11 +57,11 @@
   margin-right: 5px;
 }
 .menu button.menu__create_note:before {
-  background: url('https://image.flaticon.com/icons/svg/14/14862.svg') no-repeat center center;
+  background: url('../images/create_note.svg') no-repeat center center;
   background-size: 80%;
 }
 .menu button.menu__create_folder:before {
-  background: url('https://image.flaticon.com/icons/svg/2088/2088592.svg') no-repeat center center;
+  background: url('../images/create_folder.svg') no-repeat center center;
   background-size: 80%;
 }
 .menu button:hover {

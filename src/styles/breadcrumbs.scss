@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+.breadcrumbs {
+  display: block;
+  position: fixed;
+  top: 90px;
+  left: 20px;
+  line-height: 20px;
+  border-radius: var(--border-radius);
+  padding: 0 10px;
+  background-color: var(--menu-color);
+}

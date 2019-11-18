@@ -3,20 +3,20 @@ html *::-webkit-scrollbar {
 }
 html *::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: darkgrey;
+  background-color: transparent;
   box-sizing: border-box;
-  border: 2px solid #FFF;
+  border: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 body {
   margin: 0;
-  font-family: "Zilla Slab", serif;
+  font-family: 'Zilla Slab', serif;
 }
 
 input,
 button,
 textarea {
-  font-family: "Zilla Slab", serif;
+  font-family: 'Zilla Slab', serif;
 }
 input:focus,
 button:focus,

@@ -5,25 +5,23 @@ export class Dialog {
     const dialogTemplate = initDialog();
 
     const input = document.createElement('input');
-    const confirm = document.createElement('button');
+    const submit = document.createElement('button');
     const reject = document.createElement('button');
     input.setAttribute('class', 'dialog__title');
     input.setAttribute('type', 'text');
-    confirm.setAttribute('class', 'dialog__confirm');
-    reject.setAttribute('class', 'dialog__reject');
+    submit.setAttribute('class', 'submit');
+    reject.setAttribute('class', 'reject');
 
     input.placeholder = question;
-    confirm.innerText = 'Ok';
-    reject.innerText = 'Cancel';
 
-    confirm.addEventListener('click', () => {
+    submit.addEventListener('click', () => {
       document.body.removeChild(dialogTemplate);
       callback(input.value);
     });
     reject.addEventListener('click', () => document.body.removeChild(dialogTemplate));
 
     dialogTemplate.querySelector('.content').appendChild(input);
-    dialogTemplate.querySelector('.controls').appendChild(confirm);
+    dialogTemplate.querySelector('.controls').appendChild(submit);
     dialogTemplate.querySelector('.controls').appendChild(reject);
 
     document.body.appendChild(dialogTemplate);

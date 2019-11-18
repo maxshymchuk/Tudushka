@@ -3,7 +3,7 @@
 .grid {
   display: grid;
   justify-content: center;
-  padding: 70px 20px;
+  padding: 110px 20px;
   margin: 20px 0;
   grid: 240px / repeat(auto-fill, 200px);
   grid-gap: var(--grid-gap);
@@ -16,36 +16,41 @@
     border-radius: var(--border-radius);
     overflow: hidden;
     box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
     transition: 0.25s;
-    &:hover {
-      border-width: 5px;
-    }
     &.folder {
       padding: 10px;
-      justify-content: flex-end;
       text-align: center;
-      background: url('https://image.flaticon.com/icons/svg/148/148953.svg') no-repeat center center var(--folder-color);
+      background: url('../images/folder.svg') no-repeat center center var(--folder-color);
       background-size: 60%;
-      border-color: #000;
+      font-size: 1.4rem;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: var(--folder-hover-color);
+      }
     }
     &.note {
+      box-shadow: var(--box-shadow);
+      &:hover {
+        box-shadow: 0 0 10px 5px var(--box-shadow-color);
+      }
       .title {
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        padding: 5px 10px;
+        padding: 0 10px;
+        min-height: 40px;
+        line-height: 40px;
         font-size: 1.5rem;
         border-bottom: 1px solid #000;
-        // cursor: move;
       }
       .content {
-        height: auto;
-        padding: 10px;
-        // background-color: yellow;
-        overflow: hidden;
+        display: block;
+        justify-self: stretch;
+        padding: 5px 10px;
+        margin: 2px; // scrollbar thumb border width
+        word-break: break-word;
+        overflow-y: auto;
       }
       .footer {
         margin-top: auto;

@@ -1,5 +1,6 @@
 import { Utils } from './Utils';
 import { grid } from '../scripts/grid';
+import { breadcrumbs } from '../scripts/breadcrumbs';
 
 const colors = [
   ['#EDE604', '#000'],
@@ -16,12 +17,23 @@ const colors = [
   ['#9ED112', '#000']
 ];
 
+export const ItemType = {
+  note: 'note',
+  folder: 'folder'
+};
+
+export const FolderType = {
+  backFolder: 'backFolder',
+  folder: 'folder'
+};
+
 export class GridItem {
   constructor() {
     this.id = Utils.generateId(16);
     this.item = null;
     this.title = 'Title';
     this.content = 'Content';
+    this.itemType = null;
 
     const randNum = Utils.rand(0, colors.length - 1);
     this.backgroundColor = colors[randNum][0];
@@ -29,6 +41,8 @@ export class GridItem {
   }
 
   createNote(title, content) {
+    this.itemType = ItemType.note;
+
     if (title) this.title = title;
     if (content) this.content = content;
 
@@ -44,11 +58,20 @@ export class GridItem {
 
     this.item.style.backgroundColor = this.backgroundColor;
     this.item.style.color = this.color;
-    this.item.style.borderColor = 'red'; //this.color; // make color darker
     this.titleElem.style.borderColor = this.color;
 
     this.titleElem.innerText = this.title;
     this.contentElem.innerHTML = `<span>${this.content}</span>`;
+
+    this.item.addEventListener('dragstart', e => {
+      e.dataTransfer.setData(
+        'text',
+        JSON.stringify({
+          type: this.itemType,
+          id: this.id
+        })
+      );
+    });
 
     this.item.addEventListener('dblclick', () => {
       alert(this.Id);
@@ -63,7 +86,10 @@ export class GridItem {
   //   folders: [];
   //   notes: [];
   // }
-  createFolder(title) {
+  createFolder(folderType, title) {
+    this.itemType = ItemType.folder;
+    this.folderType = folderType;
+
     if (title) this.title = title;
 
     const templateItem = document.getElementById('template__grid_folder');
@@ -78,12 +104,46 @@ export class GridItem {
     this.folders = [];
     this.notes = [];
 
+    this.item.addEventListener('dragstart', e => {
+      if (this.folderType === FolderType.folder) {
+        e.dataTransfer.setData(
+          'text',
+          JSON.stringify({
+            type: this.itemType,
+            id: this.id
+          })
+        );
+      }
+    });
+
+    this.item.addEventListener('dragover', e => e.preventDefault());
+
+    this.item.addEventListener('drop', e => {
+      e.preventDefault();
+      let elem = null;
+      const data = JSON.parse(e.dataTransfer.getData('text'));
+      console.log(data);
+      switch (data.type) {
+        case ItemType.note:
+          elem = grid.currentDir.notes.filter(n => n.Id === data.id)[0];
+          this.notes.push(elem);
+          break;
+        case ItemType.folder:
+          elem = grid.currentDir.folders.filter(f => f.Id === data.id)[0];
+          elem.folders.forEach(f => (f.prevFolder = this));
+          this.folders.push(elem);
+          break;
+      }
+      grid.RemoveItem(data.type, elem);
+    });
+
     this.item.addEventListener('dblclick', () => {
-      if (this.Title === '...') {
-        // MUST BE FIXED!!!!!
+      if (this.folderType === FolderType.backFolder) {
         grid.CurrentDir = this.prevFolder;
+        breadcrumbs.RemovePath(this.title);
       } else {
         grid.CurrentDir = this;
+        breadcrumbs.AddPath(this.title);
       }
     });
 
@@ -96,6 +156,10 @@ export class GridItem {
 
   get Id() {
     return this.id;
+  }
+
+  get Type() {
+    return this.itemType;
   }
 
   get Title() {

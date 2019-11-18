@@ -19,9 +19,9 @@
     }
     .controls {
       @include controls-custom;
-    }
-    button {
-      @include button-dialog;
+      button {
+        @include button-dialog;
+      }
     }
   }
 }

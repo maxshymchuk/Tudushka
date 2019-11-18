@@ -10,6 +10,7 @@
   --menu-button-color: #eee;
   --menu-button-hover-color: #eaeaea;
   --folder-color: #eee;
+  --folder-hover-color: #ddd;
 }
 
 :root {
@@ -24,6 +25,7 @@
   --menu-button-color: #eee;
   --menu-button-hover-color: #eaeaea;
   --folder-color: #eee;
+  --folder-hover-color: #ddd;
 }
 
 .editor {
@@ -38,10 +40,11 @@
 }
 .editor .note {
   width: 100%;
+  height: 100%;
   max-width: 900px;
   margin: 0 auto;
-  margin-bottom: 50px;
   padding-top: 80px;
+  box-sizing: border-box;
   box-shadow: var(--box-shadow);
 }
 .editor .note .controls {
@@ -67,12 +70,12 @@
 }
 .editor .note .controls .reject.submit,
 .editor .note .controls .submit.submit {
-  background: url('https://image.flaticon.com/icons/svg/1632/1632596.svg') no-repeat center center;
+  background: url('../images/submit.svg') no-repeat center center;
   background-size: 50%;
 }
 .editor .note .controls .reject.reject,
 .editor .note .controls .submit.reject {
-  background: url('https://image.flaticon.com/icons/svg/1632/1632600.svg') no-repeat center center;
+  background: url('../images/reject.svg') no-repeat center center;
   background-size: 50%;
 }
 .editor .note .controls .reject:hover,
@@ -91,7 +94,7 @@
 .editor .note .textarea__note_content {
   display: block;
   width: 100%;
-  height: 2000px;
+  height: 100%;
   box-sizing: border-box;
   resize: none;
   border: 0;

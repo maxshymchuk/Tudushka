@@ -10,6 +10,7 @@
   --menu-button-color: #eee;
   --menu-button-hover-color: #eaeaea;
   --folder-color: #eee;
+  --folder-hover-color: #ddd;
 }
 
 :root {
@@ -24,6 +25,7 @@
   --menu-button-color: #eee;
   --menu-button-hover-color: #eaeaea;
   --folder-color: #eee;
+  --folder-hover-color: #ddd;
 }
 
 .dialog-container {
@@ -54,7 +56,7 @@
   width: 100%;
   background-color: #fff;
 }
-.dialog-container .dialog button {
+.dialog-container .dialog .controls button {
   display: block;
   width: 40px;
   height: 40px;
@@ -64,14 +66,14 @@
   white-space: nowrap;
   cursor: pointer;
 }
-.dialog-container .dialog button.submit {
-  background: url('https://image.flaticon.com/icons/svg/1632/1632596.svg') no-repeat center center;
+.dialog-container .dialog .controls button.submit {
+  background: url('../images/submit.svg') no-repeat center center;
   background-size: 50%;
 }
-.dialog-container .dialog button.reject {
-  background: url('https://image.flaticon.com/icons/svg/1632/1632600.svg') no-repeat center center;
+.dialog-container .dialog .controls button.reject {
+  background: url('../images/reject.svg') no-repeat center center;
   background-size: 50%;
 }
-.dialog-container .dialog button:hover {
+.dialog-container .dialog .controls button:hover {
   background-color: var(--hover-button-color);
 }

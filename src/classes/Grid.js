@@ -1,4 +1,4 @@
-import { GridItem } from './GridItem';
+import { GridItem, ItemType, FolderType } from './GridItem';
 
 export class Grid {
   constructor(element) {
@@ -18,8 +18,8 @@ export class Grid {
     const gridItem = new GridItem();
     const backFolder = new GridItem();
 
-    gridItem.createFolder(title);
-    backFolder.createFolder('...');
+    gridItem.createFolder(FolderType.folder, title);
+    backFolder.createFolder(FolderType.backFolder, '...');
 
     gridItem.folders.push(backFolder);
 
@@ -31,15 +31,31 @@ export class Grid {
     console.log('Folder added');
   }
 
+  RemoveItem(type, item) {
+    switch (type) {
+      case ItemType.note:
+        delete this.currentDir.notes[this.currentDir.notes.indexOf(item)];
+        break;
+      case ItemType.folder:
+        delete this.currentDir.folders[this.currentDir.folders.indexOf(item)];
+        break;
+    }
+    this.Redraw();
+  }
+
   Redraw() {
     this.grid.innerHTML = '';
     this.currentDir.folders &&
       this.currentDir.folders.forEach(f => {
-        this.grid.appendChild(f.Handle);
+        if (f.folderType === FolderType.backFolder) {
+          f.Handle.style.backgroundImage = 'url(./src/images/back.svg)';
+          this.grid.insertAdjacentElement('afterbegin', f.Handle);
+        } else {
+          this.grid.appendChild(f.Handle);
+        }
       });
-    // must redraw in alternate order!!!!!!
     this.currentDir.notes &&
-      this.currentDir.notes.forEach(n => {
+      this.currentDir.notes.reverse().forEach(n => {
         this.grid.appendChild(n.Handle);
       });
   }
@@ -54,7 +70,6 @@ export class Grid {
 
   set CurrentDir(folder) {
     this.currentDir = folder;
-    document.getElementById('grid__path').innerText = this.currentDir.Id;
 
     this.Redraw();
   }
