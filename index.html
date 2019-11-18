@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <title>Tudushka</title>
-</head>
-<body>
-  <template id="template__hello">
-    <div class="hello">
-      <article class="title">
-        Welcome to Tudushka!
-      </article>
-      <span class="details">
-        Organize it all with Tudushka!
-      </span>
-      <input type="button" value="Let's get started!">
-    </div>
-  </template>
-  <template id="template__menu">
-    <section class="menu">
-      <button id="menu__create_note" class="menu__create_note custom" type="button">New note</button>
-      <button id="menu__create_folder" class="menu__create_folder custom" type="button">New folder</button>
-    </section>
-  </template>
-  <template id="template__grid_folder">
-    <div class="item folder">
-      Folder
-    </div>
-  </template>
-  <template id="template__grid_note">
-    <div class="item note">
-      <article class="title">Title</article>
-      <section class="content">
-        <span>Content</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Tudushka</title>
+  </head>
+  <body>
+    <template id="template__hello">
+      <div class="hello">
+        <article class="title">
+          Welcome to Tudushka!
+        </article>
+        <span class="details">
+          Organize it all with Tudushka!
+        </span>
+        <input type="button" value="Let's get started!" />
+      </div>
+    </template>
+    <template id="template__menu">
+      <section class="menu">
+        <button id="menu__create_note" class="menu__create_note" type="button">New note</button>
+        <button id="menu__create_folder" class="menu__create_folder" type="button">New folder</button>
       </section>
-      <footer class="footer"><span>more ></span></footer>
-    </div>
-  </template>
-  <template id="template__editor_note">
-    <section class="editor">
-      <section class="note">
-        <section class="controls">
-          <button class="submit" id="editor__submit"></button>
-          <button class="close" id="editor__close"></button>
-          <input class="input__note_title" type="text" placeholder="Title">
+    </template>
+    <template id="template__grid_folder">
+      <div class="item folder">
+        Folder
+      </div>
+    </template>
+    <template id="template__grid_note">
+      <div class="item note">
+        <article class="title">Title</article>
+        <section class="content">
+          <span>Content</span>
         </section>
-        <textarea class="textarea__note_content" placeholder="Content"></textarea>
-      </section>
-    </section>
-  </template>
-  <template id="template__editor_folder">
-    <section class="editor">
-      <section class="folder">
-        <input class="input__folder_title" type="text" placeholder="Folder title">
-        <section class="controls">
-          <button class="submit" id="editor__submit"></button>
-          <button class="close" id="editor__close"></button>
+        <footer class="footer"><span>more ></span></footer>
+      </div>
+    </template>
+    <template id="template__editor">
+      <section class="editor">
+        <section class="note">
+          <section class="controls">
+            <button class="submit" id="editor__submit"></button>
+            <button class="reject" id="editor__close"></button>
+            <input class="input__note_title" type="text" placeholder="Title" />
+          </section>
+          <textarea class="textarea__note_content" placeholder="Content"></textarea>
         </section>
       </section>
-    </section>
-  </template>
-  <script src="dist/bundle.js"></script>
-</body>
+    </template>
+    <template id="template__dialog">
+      <section class="dialog-container">
+        <section class="dialog">
+          <section class="content"></section>
+          <section class="controls"></section>
+        </section>
+      </section>
+    </template>
+    <script src="dist/bundle.js"></script>
+  </body>
 </html>

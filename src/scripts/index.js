@@ -7,8 +7,8 @@ import { initGrid } from './grid';
 const initApp = () => {
   document.addEventListener('DOMContentLoaded', () => {
     initHello();
-    initMenu();
     initGrid();
+    initMenu();
 
     console.log('App inited');
   });

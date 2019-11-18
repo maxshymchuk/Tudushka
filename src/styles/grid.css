@@ -3,13 +3,13 @@
   --button-border-radius: 5px;
   --grid-gap: 20px;
   --box-shadow: 0 0 20px 0 var(--box-shadow-color);
-  --box-shadow-color: #AAA;
+  --box-shadow-color: #aaa;
   --hover-button-color: rgba(0, 0, 0, 0.1);
   --inactive-background-color: rgba(255, 255, 255, 0.75);
-  --menu-color: #DDD;
-  --menu-button-color: #EEE;
-  --menu-button-hover-color: #EAEAEA;
-  --folder-color: #EEE;
+  --menu-color: #ddd;
+  --menu-button-color: #eee;
+  --menu-button-hover-color: #eaeaea;
+  --folder-color: #eee;
 }
 
 .grid {
@@ -17,7 +17,7 @@
   justify-content: center;
   padding: 70px 20px;
   margin: 20px 0;
-  grid: 240px/repeat(auto-fill, 200px);
+  grid: 240px / repeat(auto-fill, 200px);
   grid-gap: var(--grid-gap);
   user-select: none;
 }
@@ -28,14 +28,21 @@
   height: 240px;
   border-radius: var(--border-radius);
   overflow: hidden;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  transition: 0.25s;
+}
+.grid .item:hover {
+  border-width: 5px;
 }
 .grid .item.folder {
-  box-sizing: border-box;
   padding: 10px;
   justify-content: flex-end;
   text-align: center;
-  background: url("https://image.flaticon.com/icons/svg/148/148953.svg") no-repeat center center var(--folder-color);
+  background: url('https://image.flaticon.com/icons/svg/148/148953.svg') no-repeat center center var(--folder-color);
   background-size: 60%;
+  border-color: #000;
 }
 .grid .item.note .title {
   display: block;

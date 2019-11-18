@@ -1,0 +1,27 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.dialog-container {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--inactive-background-color);
+  .dialog {
+    margin: auto;
+    box-shadow: var(--box-shadow);
+    .content {
+      input[type='text'] {
+        @include input-custom;
+      }
+    }
+    .controls {
+      @include controls-custom;
+    }
+    button {
+      @include button-dialog;
+    }
+  }
+}

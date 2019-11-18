@@ -1,8 +1,8 @@
 import '../styles/menu.css';
-import '../styles/custom.css';
 
-import { ItemType } from '../classes/GridItem';
+import { grid } from './grid';
 import { createEditor } from './editor';
+import { Dialog } from '../classes/Dialog';
 
 export const initMenu = () => {
   const templateMenu = document.getElementById('template__menu');
@@ -10,8 +10,10 @@ export const initMenu = () => {
 
   document.body.insertAdjacentElement('afterbegin', clone.querySelector('.menu'));
 
-  document.getElementById('menu__create_note').addEventListener('click', () => createEditor(ItemType.note));
-  document.getElementById('menu__create_folder').addEventListener('click', () => createEditor(ItemType.folder));
+  document.getElementById('menu__create_note').addEventListener('click', () => createEditor(document.body));
+  document
+    .getElementById('menu__create_folder')
+    .addEventListener('click', () => Dialog.Prompt('Folder name:', grid.AddFolder.bind(grid)));
 
   console.log('Menu inited');
-}
+};

@@ -1,21 +1,10 @@
 import '../styles/editor.css';
-import { ItemType } from './GridItem';
 
 export class Editor {
-  constructor(parent, itemType) {
+  constructor(parent) {
     this.parent = parent;
-    this.itemType = itemType;
 
-    let templateItem = null;
-    switch (this.itemType) {
-      case ItemType.note:
-        templateItem = document.getElementById('template__editor_note');
-        break;
-      case ItemType.folder:
-        templateItem = document.getElementById('template__editor_folder');
-        break;
-    }
-
+    const templateItem = document.getElementById('template__editor');
     const clone = templateItem.content.cloneNode(true);
     this.editor = clone.querySelector('.editor');
 
@@ -26,10 +15,6 @@ export class Editor {
 
   get Handle() {
     return this.editor;
-  }
-
-  get Type() {
-    return this.itemType;
   }
 
   get Parent() {
