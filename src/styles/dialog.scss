@@ -8,8 +8,10 @@
   top: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   background-color: var(--inactive-background-color);
   .dialog {
+    position: relative;
     margin: auto;
     box-shadow: var(--box-shadow);
     .content {

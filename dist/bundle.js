@@ -105,7 +105,7 @@
         // Module
         exports.push([
           module.i,
-          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.breadcrumbs {\n  display: block;\n  position: fixed;\n  top: 90px;\n  left: 20px;\n  line-height: 20px;\n  border-radius: var(--border-radius);\n  padding: 0 10px;\n  background-color: var(--menu-color);\n}\n',
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --placeholder-color: rgba(0, 0, 0, 0.5);\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.breadcrumbs {\n  display: block;\n  position: fixed;\n  top: 90px;\n  margin-left: 20px;\n  line-height: 20px;\n  border-radius: var(--border-radius);\n  padding: 0 10px;\n  background-color: var(--menu-color);\n}\n',
           ''
         ]);
 
@@ -134,7 +134,7 @@
         // Module
         exports.push([
           module.i,
-          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.dialog-container {\n  display: flex;\n  position: fixed;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--inactive-background-color);\n}\n.dialog-container .dialog {\n  margin: auto;\n  box-shadow: var(--box-shadow);\n}\n.dialog-container .dialog .content input[type=text] {\n  width: 100%;\n  line-height: 40px;\n  padding: 0 20px;\n  font-size: 1.4rem;\n  font-weight: bold;\n  border: 0;\n  box-sizing: border-box;\n}\n.dialog-container .dialog .controls {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  background-color: #fff;\n}\n.dialog-container .dialog .controls button {\n  display: block;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background-color: transparent;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  cursor: pointer;\n}\n.dialog-container .dialog .controls button.submit {\n  background: url(' +
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --placeholder-color: rgba(0, 0, 0, 0.5);\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --placeholder-color: rgba(0, 0, 0, 0.5);\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.dialog-container {\n  display: flex;\n  position: fixed;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  background-color: var(--inactive-background-color);\n}\n.dialog-container .dialog {\n  position: relative;\n  margin: auto;\n  box-shadow: var(--box-shadow);\n}\n.dialog-container .dialog .content input[type=text] {\n  width: 100%;\n  line-height: 40px;\n  padding: 0 20px;\n  font-size: 1.4rem;\n  font-weight: bold;\n  border: 0;\n  box-sizing: border-box;\n}\n.dialog-container .dialog .controls {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  background-color: #fff;\n}\n.dialog-container .dialog .controls button {\n  display: block;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background-color: transparent;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  cursor: pointer;\n}\n.dialog-container .dialog .controls button.submit {\n  background: url(' +
             ___CSS_LOADER_URL___0___ +
             ') no-repeat center center;\n  background-size: 50%;\n}\n.dialog-container .dialog .controls button.reject {\n  background: url(' +
             ___CSS_LOADER_URL___1___ +
@@ -167,11 +167,11 @@
         // Module
         exports.push([
           module.i,
-          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.editor {\n  display: flex;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 1;\n  background-color: var(--inactive-background-color);\n  overflow-y: auto;\n}\n.editor .note {\n  width: 100%;\n  height: 70%;\n  max-width: 500px;\n  margin: auto;\n  padding-top: 80px;\n  box-sizing: border-box;\n  position: relative;\n  box-shadow: var(--box-shadow);\n}\n.editor .note .controls {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  background-color: #fff;\n  max-width: 500px;\n  position: absolute;\n  top: 0;\n}\n.editor .note .controls .reject,\n.editor .note .controls .submit {\n  display: block;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background-color: transparent;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  cursor: pointer;\n}\n.editor .note .controls .reject.submit,\n.editor .note .controls .submit.submit {\n  background: url(' +
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --placeholder-color: rgba(0, 0, 0, 0.5);\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --placeholder-color: rgba(0, 0, 0, 0.5);\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n@keyframes fading-moving-top {\n  0% {\n    top: 50px;\n    opacity: 0;\n  }\n  100% {\n    top: 0;\n    opacity: 1;\n  }\n}\n@keyframes fading-moving-left {\n  0% {\n    left: -50px;\n    opacity: 0;\n  }\n  100% {\n    left: 0;\n    opacity: 1;\n  }\n}\n@keyframes fading {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@keyframes bubble {\n  0% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.1);\n  }\n  100% {\n    transform: scale(1);\n  }\n}\n@keyframes shaking {\n  0% {\n    transform: rotate(0);\n  }\n  33% {\n    transform: rotate(-5deg);\n  }\n  66% {\n    transform: rotate(5deg);\n  }\n  100% {\n    transform: rotate(0);\n  }\n}\n.editor {\n  display: flex;\n  position: fixed;\n  overflow: hidden;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 1;\n  background-color: var(--inactive-background-color);\n}\n.editor .note {\n  position: relative;\n  width: 100%;\n  height: 70%;\n  max-width: 500px;\n  margin: auto;\n  padding-top: 80px;\n  box-sizing: border-box;\n  position: relative;\n  box-shadow: var(--box-shadow);\n}\n.editor .note .controls {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  background-color: #fff;\n  max-width: 500px;\n  position: absolute;\n  top: 0;\n}\n.editor .note .controls .reject,\n.editor .note .controls .submit {\n  display: block;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background-color: transparent;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  cursor: pointer;\n}\n.editor .note .controls .reject.submit,\n.editor .note .controls .submit.submit {\n  background: url(' +
             ___CSS_LOADER_URL___0___ +
             ') no-repeat center center;\n  background-size: 50%;\n}\n.editor .note .controls .reject.reject,\n.editor .note .controls .submit.reject {\n  background: url(' +
             ___CSS_LOADER_URL___1___ +
-            ') no-repeat center center;\n  background-size: 50%;\n}\n.editor .note .controls .reject:hover,\n.editor .note .controls .submit:hover {\n  background-color: var(--hover-button-color);\n}\n.editor .note .controls .input__note_title {\n  width: 100%;\n  line-height: 40px;\n  padding: 0 20px;\n  font-size: 1.4rem;\n  font-weight: bold;\n  border: 0;\n  box-sizing: border-box;\n  background-color: var(--folder-color);\n}\n.editor .note .textarea__note_content {\n  display: block;\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  resize: none;\n  border: 0;\n  padding: 20px;\n  font-size: 1.2rem;\n}\n',
+            ') no-repeat center center;\n  background-size: 50%;\n}\n.editor .note .controls .reject:hover,\n.editor .note .controls .submit:hover {\n  background-color: var(--hover-button-color);\n}\n.editor .note .controls .input__note_title {\n  width: 100%;\n  line-height: 40px;\n  padding: 0 20px;\n  font-size: 1.4rem;\n  font-weight: bold;\n  border: 0;\n  box-sizing: border-box;\n  background-color: var(--folder-color);\n}\n.editor .note .textarea__note_content {\n  display: block;\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  resize: none;\n  border: 0;\n  padding: 20px;\n  font-size: 1.2rem;\n}\n.editor .note .textarea__note_content::placeholder {\n  color: var(--placeholder-color);\n}\n',
           ''
         ]);
 
@@ -197,7 +197,7 @@
         // Module
         exports.push([
           module.i,
-          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.grid {\n  display: grid;\n  justify-content: center;\n  padding: 110px 20px;\n  margin: 20px 0;\n  grid: 240px/repeat(auto-fill, 200px);\n  grid-gap: var(--grid-gap);\n  user-select: none;\n}\n.grid .item {\n  display: flex;\n  flex-direction: column;\n  width: 200px;\n  height: 240px;\n  border-radius: var(--border-radius);\n  overflow: hidden;\n  box-sizing: border-box;\n}\n.grid .item .title-section {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  border-bottom: 1px solid #000;\n  padding: 0 10px;\n  min-height: 40px;\n}\n.grid .item .title-section .title {\n  display: block;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  line-height: 40px;\n  font-size: 1.5rem;\n}\n.grid .item .checkbox {\n  display: none;\n}\n.grid .item .checkbox + .checkbox__label {\n  cursor: pointer;\n  min-width: 30px;\n  width: 30px;\n  height: 30px;\n  border-radius: 50%;\n  box-sizing: border-box;\n  position: relative;\n  border: 5px solid var(--hover-button-color);\n  transition: border var(--transition-time), box-shadow var(--transition-time);\n}\n.grid .item .checkbox:checked + .checkbox__label {\n  border: 15px solid var(--hover-button-color);\n}\n.grid .item .checkbox:not(:checked) + .checkbox__label {\n  border: 5px solid transparent;\n}\n.grid .item:hover .checkbox + .checkbox__label {\n  box-shadow: inset 0 0 0 5px var(--hover-button-color);\n}\n.grid .item.folder {\n  background: url(' +
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --placeholder-color: rgba(0, 0, 0, 0.5);\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.grid {\n  display: grid;\n  justify-content: center;\n  padding: 110px 20px;\n  margin: 20px 0;\n  grid: 240px/repeat(auto-fill, 200px);\n  grid-gap: var(--grid-gap);\n  user-select: none;\n}\n.grid .item {\n  display: flex;\n  flex-direction: column;\n  width: 200px;\n  height: 240px;\n  border-radius: var(--border-radius);\n  overflow: hidden;\n  box-sizing: border-box;\n}\n.grid .item .title-section {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  border-bottom: 1px solid #000;\n  padding: 0 10px;\n  min-height: 40px;\n}\n.grid .item .title-section .title {\n  display: block;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  line-height: 40px;\n  font-size: 1.5rem;\n}\n.grid .item .checkbox {\n  display: none;\n}\n.grid .item .checkbox + .checkbox__label {\n  cursor: pointer;\n  min-width: 30px;\n  width: 30px;\n  height: 30px;\n  border-radius: 50%;\n  box-sizing: border-box;\n  position: relative;\n  border: 5px solid var(--hover-button-color);\n  transition: border var(--transition-time), box-shadow var(--transition-time);\n}\n.grid .item .checkbox:checked + .checkbox__label {\n  border: 15px solid var(--hover-button-color);\n}\n.grid .item .checkbox:not(:checked) + .checkbox__label {\n  border: 5px solid transparent;\n}\n.grid .item:hover .checkbox + .checkbox__label {\n  box-shadow: inset 0 0 0 5px var(--hover-button-color);\n}\n.grid .item.folder {\n  background: url(' +
             ___CSS_LOADER_URL___0___ +
             ') no-repeat center 65% var(--folder-color);\n  background-size: 60%;\n  transition: background-color var(--transition-time);\n}\n.grid .item.folder:hover {\n  background-color: var(--folder-hover-color);\n}\n.grid .item.note {\n  transition: box-shadow var(--transition-time);\n  box-shadow: var(--box-shadow);\n}\n.grid .item.note:hover {\n  box-shadow: 0 0 10px 5px var(--box-shadow-color);\n}\n.grid .item.note .content {\n  display: block;\n  justify-self: stretch;\n  margin: 10px;\n  margin-top: 0;\n  padding-right: 5px;\n  word-break: break-word;\n  overflow-y: auto;\n}\n.grid .item.note .content p {\n  padding: 5px 0;\n  margin: 0;\n}\n',
           ''
@@ -228,11 +228,11 @@
         // Module
         exports.push([
           module.i,
-          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.hello {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-color: #FFF;\n  overflow: hidden;\n}\n.hello .title {\n  width: 100%;\n  text-align: center;\n  display: block;\n  font-size: 3rem;\n  color: #FFF;\n  padding: 30px 0;\n  font-weight: bold;\n  letter-spacing: 5px;\n  background-color: var(--accent-color);\n}\n.hello .details {\n  font-size: 1rem;\n  padding: 30px 0;\n}\n.hello .button {\n  border-radius: var(--button-border-radius);\n  border: 0;\n  background-color: var(--menu-button-color);\n  margin: 0;\n  padding: 5px 10px;\n  line-height: 20px;\n  cursor: pointer;\n  text-transform: uppercase;\n  font-size: 1.2rem;\n  padding: 8px 100px;\n  transition: all 0.5s;\n}\n.hello .button.menu__create_note:before, .hello .button.menu__create_folder:before {\n  content: "";\n  display: block;\n  width: 20px;\n  height: 20px;\n  float: left;\n  margin-right: 5px;\n}\n.hello .button.menu__create_note:before {\n  background: url(' +
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --placeholder-color: rgba(0, 0, 0, 0.5);\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --placeholder-color: rgba(0, 0, 0, 0.5);\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.hello {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-color: #fff;\n  overflow: hidden;\n}\n.hello .title {\n  width: 100%;\n  text-align: center;\n  display: block;\n  font-size: 3rem;\n  color: #fff;\n  padding: 30px 0;\n  font-weight: bold;\n  letter-spacing: 5px;\n  background-color: var(--accent-color);\n}\n.hello .details {\n  font-size: 1rem;\n  padding: 30px 0;\n}\n.hello .button {\n  border-radius: var(--button-border-radius);\n  border: 0;\n  background-color: var(--menu-button-color);\n  margin: 0;\n  padding: 5px 10px;\n  line-height: 20px;\n  cursor: pointer;\n  text-transform: uppercase;\n  font-size: 1.2rem;\n  padding: 8px 100px;\n  transition: all 0.5s;\n}\n.hello .button.menu__create_note:before, .hello .button.menu__create_folder:before {\n  content: "";\n  display: block;\n  width: 20px;\n  height: 20px;\n  float: left;\n  margin-right: 5px;\n}\n.hello .button.menu__create_note:before {\n  background: url(' +
             ___CSS_LOADER_URL___0___ +
             ') no-repeat center center;\n  background-size: 80%;\n}\n.hello .button.menu__create_folder:before {\n  background: url(' +
             ___CSS_LOADER_URL___1___ +
-            ') no-repeat center center;\n  background-size: 80%;\n}\n.hello .button:hover {\n  background-color: var(--menu-button-hover-color);\n}\n.hello .button:hover {\n  background-color: var(--accent-color);\n  padding: 8px 200px;\n  color: #FFF;\n}\n',
+            ') no-repeat center center;\n  background-size: 80%;\n}\n.hello .button:hover {\n  background-color: var(--menu-button-hover-color);\n}\n.hello .button:hover {\n  background-color: var(--accent-color);\n  padding: 8px 200px;\n  color: #fff;\n}\n',
           ''
         ]);
 
@@ -251,7 +251,7 @@
         // Module
         exports.push([
           module.i,
-          'html *::-webkit-scrollbar {\n  width: 10px;\n}\nhtml *::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: transparent;\n  box-sizing: border-box;\n  border: 2px solid rgba(0, 0, 0, 0.2);\n}\n\nbody {\n  margin: 0;\n  font-family: "Zilla Slab", serif;\n}\n\ninput,\nbutton,\ntextarea {\n  font-family: "Zilla Slab", serif;\n}\ninput:focus,\nbutton:focus,\ntextarea:focus {\n  outline: none;\n}\n',
+          "html *::-webkit-scrollbar {\n  width: 10px;\n}\nhtml *::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: transparent;\n  box-sizing: border-box;\n  border: 2px solid rgba(0, 0, 0, 0.2);\n}\n\nbody {\n  margin: 0;\n  font-family: 'Zilla Slab', serif;\n}\n\ninput,\nbutton,\ntextarea {\n  font-family: 'Zilla Slab', serif;\n}\ninput:focus,\nbutton:focus,\ntextarea:focus {\n  outline: none;\n}\n",
           ''
         ]);
 
@@ -280,7 +280,7 @@
         // Module
         exports.push([
           module.i,
-          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.menu {\n  position: fixed;\n  left: 20px;\n  top: 20px;\n  padding: 10px;\n  background-color: var(--menu-color);\n  border-radius: var(--border-radius);\n  font-size: 0;\n}\n.menu button {\n  border-radius: var(--button-border-radius);\n  border: 0;\n  background-color: var(--menu-button-color);\n  margin: 0;\n  padding: 5px 10px;\n  line-height: 20px;\n  cursor: pointer;\n  font-size: 1rem;\n}\n.menu button.menu__create_note:before, .menu button.menu__create_folder:before {\n  content: "";\n  display: block;\n  width: 20px;\n  height: 20px;\n  float: left;\n  margin-right: 5px;\n}\n.menu button.menu__create_note:before {\n  background: url(' +
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --placeholder-color: rgba(0, 0, 0, 0.5);\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --placeholder-color: rgba(0, 0, 0, 0.5);\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.menu {\n  position: fixed;\n  top: 20px;\n  margin-left: 20px;\n  padding: 10px;\n  background-color: var(--menu-color);\n  border-radius: var(--border-radius);\n  font-size: 0;\n}\n.menu button {\n  border-radius: var(--button-border-radius);\n  border: 0;\n  background-color: var(--menu-button-color);\n  margin: 0;\n  padding: 5px 10px;\n  line-height: 20px;\n  cursor: pointer;\n  font-size: 1rem;\n}\n.menu button.menu__create_note:before, .menu button.menu__create_folder:before {\n  content: "";\n  display: block;\n  width: 20px;\n  height: 20px;\n  float: left;\n  margin-right: 5px;\n}\n.menu button.menu__create_note:before {\n  background: url(' +
             ___CSS_LOADER_URL___0___ +
             ') no-repeat center center;\n  background-size: 80%;\n}\n.menu button.menu__create_folder:before {\n  background: url(' +
             ___CSS_LOADER_URL___1___ +
@@ -721,6 +721,83 @@
         /***/
       },
 
+    /***/ './src/classes/Animation.js':
+      /*!**********************************!*\
+  !*** ./src/classes/Animation.js ***!
+  \**********************************/
+      /*! exports provided: AnimeDir, Animation */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict';
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, 'AnimeDir', function() {
+          return AnimeDir;
+        });
+        /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, 'Animation', function() {
+          return Animation;
+        });
+        function _classCallCheck(instance, Constructor) {
+          if (!(instance instanceof Constructor)) {
+            throw new TypeError('Cannot call a class as a function');
+          }
+        }
+
+        function _defineProperties(target, props) {
+          for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ('value' in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+          }
+        }
+
+        function _createClass(Constructor, protoProps, staticProps) {
+          if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+          if (staticProps) _defineProperties(Constructor, staticProps);
+          return Constructor;
+        }
+
+        var AnimeDir = {
+          Normal: 'normal',
+          Reverse: 'reverse'
+        };
+        var Animation =
+          /*#__PURE__*/
+          (function() {
+            function Animation() {
+              _classCallCheck(this, Animation);
+            }
+
+            _createClass(Animation, null, [
+              {
+                key: 'Animate',
+                value: function Animate(object, props, callback) {
+                  if (!object) return;
+                  if (!props.time) props.time = 500;
+                  if (!props.animeType) props.animeType = 'ease-in-out';
+                  if (!props.dir) props.dir = AnimeDir.Normal;
+                  object.style.animation = [
+                    props.name,
+                    ''.concat(props.time / 1000, 's'),
+                    props.dir,
+                    props.animeType
+                  ].join(' ');
+                  object.style.pointerEvents = 'none';
+                  setTimeout(function() {
+                    object.style.animation = '';
+                    object.style.pointerEvents = 'auto';
+                    if (callback) callback();
+                  }, props.time);
+                }
+              }
+            ]);
+
+            return Animation;
+          })();
+
+        /***/
+      },
+
     /***/ './src/classes/Breadcrumbs.js':
       /*!************************************!*\
   !*** ./src/classes/Breadcrumbs.js ***!
@@ -732,6 +809,9 @@
         /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, 'Breadcrumbs', function() {
           return Breadcrumbs;
         });
+        /* harmony import */ var _Animation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! ./Animation */ './src/classes/Animation.js'
+        );
         function _classCallCheck(instance, Constructor) {
           if (!(instance instanceof Constructor)) {
             throw new TypeError('Cannot call a class as a function');
@@ -762,6 +842,10 @@
 
               this.path = ['root'];
               this.element = element;
+              _Animation__WEBPACK_IMPORTED_MODULE_0__['Animation'].Animate(this.element, {
+                name: 'fading-moving-left',
+                dir: _Animation__WEBPACK_IMPORTED_MODULE_0__['AnimeDir'].Normal
+              });
               this.Redraw();
             }
 
@@ -771,6 +855,11 @@
                 value: function AddPath(path) {
                   this.path.push(path);
                   this.Redraw();
+                  _Animation__WEBPACK_IMPORTED_MODULE_0__['Animation'].Animate(this.element, {
+                    name: 'bubble',
+                    dir: _Animation__WEBPACK_IMPORTED_MODULE_0__['AnimeDir'].Normal,
+                    animeType: 'cubic-bezier(1.000, 1.030, 0.045, 1.475)'
+                  });
                 }
               },
               {
@@ -778,6 +867,11 @@
                 value: function RemovePath() {
                   this.path.pop();
                   this.Redraw();
+                  _Animation__WEBPACK_IMPORTED_MODULE_0__['Animation'].Animate(this.element, {
+                    name: 'bubble',
+                    dir: _Animation__WEBPACK_IMPORTED_MODULE_0__['AnimeDir'].Normal,
+                    animeType: 'cubic-bezier(1.000, 1.030, 0.045, 1.475)'
+                  });
                 }
               },
               {
@@ -807,6 +901,9 @@
         });
         /* harmony import */ var _scripts_dialog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
           /*! ../scripts/dialog */ './src/scripts/dialog.js'
+        );
+        /* harmony import */ var _Animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! ./Animation */ './src/classes/Animation.js'
         );
         function _classCallCheck(instance, Constructor) {
           if (!(instance instanceof Constructor)) {
@@ -841,7 +938,10 @@
               {
                 key: 'Prompt',
                 value: function Prompt(question, callback) {
-                  var dialogTemplate = Object(_scripts_dialog__WEBPACK_IMPORTED_MODULE_0__['initDialog'])();
+                  var _this = this;
+
+                  this.dialogTemplate = Object(_scripts_dialog__WEBPACK_IMPORTED_MODULE_0__['initDialog'])();
+                  this.dialog = this.dialogTemplate.querySelector('.dialog');
                   var input = document.createElement('input');
                   var submit = document.createElement('button');
                   var reject = document.createElement('button');
@@ -851,16 +951,25 @@
                   reject.setAttribute('class', 'reject');
                   input.placeholder = question;
                   submit.addEventListener('click', function() {
-                    document.body.removeChild(dialogTemplate);
+                    _this.close(_this.dialogTemplate);
+
                     callback(input.value);
                   });
                   reject.addEventListener('click', function() {
-                    return document.body.removeChild(dialogTemplate);
+                    return _this.close(_this.dialogTemplate);
                   });
-                  dialogTemplate.querySelector('.content').appendChild(input);
-                  dialogTemplate.querySelector('.controls').appendChild(submit);
-                  dialogTemplate.querySelector('.controls').appendChild(reject);
-                  document.body.appendChild(dialogTemplate);
+                  this.dialog.querySelector('.content').appendChild(input);
+                  this.dialog.querySelector('.controls').appendChild(submit);
+                  this.dialog.querySelector('.controls').appendChild(reject);
+                  document.body.appendChild(this.dialogTemplate);
+                  _Animation__WEBPACK_IMPORTED_MODULE_1__['Animation'].Animate(this.dialogTemplate, {
+                    name: 'fading',
+                    dir: _Animation__WEBPACK_IMPORTED_MODULE_1__['AnimeDir'].Normal
+                  });
+                  _Animation__WEBPACK_IMPORTED_MODULE_1__['Animation'].Animate(this.dialog, {
+                    name: 'fading-moving-top',
+                    dir: _Animation__WEBPACK_IMPORTED_MODULE_1__['AnimeDir'].Normal
+                  });
                 }
               },
               {
@@ -878,6 +987,25 @@
               {
                 key: 'Notify',
                 value: function Notify() {}
+              },
+              {
+                key: 'close',
+                value: function close(obj) {
+                  _Animation__WEBPACK_IMPORTED_MODULE_1__['Animation'].Animate(this.dialog, {
+                    name: 'fading-moving-top',
+                    dir: _Animation__WEBPACK_IMPORTED_MODULE_1__['AnimeDir'].Reverse
+                  });
+                  _Animation__WEBPACK_IMPORTED_MODULE_1__['Animation'].Animate(
+                    this.dialogTemplate,
+                    {
+                      name: 'fading',
+                      dir: _Animation__WEBPACK_IMPORTED_MODULE_1__['AnimeDir'].Reverse
+                    },
+                    function() {
+                      document.body.removeChild(obj);
+                    }
+                  );
+                }
               }
             ]);
 
@@ -906,6 +1034,9 @@
         );
         /* harmony import */ var _scripts_grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
           /*! ../scripts/grid */ './src/scripts/grid.js'
+        );
+        /* harmony import */ var _Animation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+          /*! ./Animation */ './src/classes/Animation.js'
         );
         function _classCallCheck(instance, Constructor) {
           if (!(instance instanceof Constructor)) {
@@ -942,6 +1073,7 @@
               var templateItem = document.getElementById('template__editor');
               var clone = templateItem.content.cloneNode(true);
               this.editor = clone.querySelector('.editor');
+              this.note = this.editor.querySelector('.note');
               this.textarea = this.editor.querySelector('.textarea__note_content');
               this.inputTitle = this.editor.querySelector('.input__note_title');
               this.submit = this.editor.querySelector('.submit');
@@ -971,6 +1103,14 @@
                 _this.close();
               });
               document.body.appendChild(this.editor);
+              _Animation__WEBPACK_IMPORTED_MODULE_2__['Animation'].Animate(this.editor, {
+                name: 'fading',
+                dir: _Animation__WEBPACK_IMPORTED_MODULE_2__['AnimeDir'].Normal
+              });
+              _Animation__WEBPACK_IMPORTED_MODULE_2__['Animation'].Animate(this.note, {
+                name: 'fading-moving-top',
+                dir: _Animation__WEBPACK_IMPORTED_MODULE_2__['AnimeDir'].Normal
+              });
               console.log('Editor created');
             }
 
@@ -978,8 +1118,23 @@
               {
                 key: 'close',
                 value: function close() {
-                  document.body.removeChild(this.editor);
-                  this.editor = null;
+                  var _this2 = this;
+
+                  _Animation__WEBPACK_IMPORTED_MODULE_2__['Animation'].Animate(this.note, {
+                    name: 'fading-moving-top',
+                    dir: _Animation__WEBPACK_IMPORTED_MODULE_2__['AnimeDir'].Reverse
+                  });
+                  _Animation__WEBPACK_IMPORTED_MODULE_2__['Animation'].Animate(
+                    this.editor,
+                    {
+                      name: 'fading',
+                      dir: _Animation__WEBPACK_IMPORTED_MODULE_2__['AnimeDir'].Reverse
+                    },
+                    function() {
+                      document.body.removeChild(_this2.editor);
+                      _this2.editor = null;
+                    }
+                  );
                 }
               }
             ]);
@@ -1184,6 +1339,9 @@
         /* harmony import */ var _scripts_breadcrumbs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
           /*! ../scripts/breadcrumbs */ './src/scripts/breadcrumbs.js'
         );
+        /* harmony import */ var _Animation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+          /*! ./Animation */ './src/classes/Animation.js'
+        );
         function _classCallCheck(instance, Constructor) {
           if (!(instance instanceof Constructor)) {
             throw new TypeError('Cannot call a class as a function');
@@ -1369,6 +1527,11 @@
                   }
 
                   _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].UnselectAll();
+                  _Animation__WEBPACK_IMPORTED_MODULE_4__['Animation'].Animate(this.item, {
+                    name: 'shaking',
+                    dir: _Animation__WEBPACK_IMPORTED_MODULE_4__['AnimeDir'].Normal,
+                    time: 300
+                  });
                   console.log('Item dropped');
                 }
               },
@@ -1410,6 +1573,11 @@
                   });
                   this.item.addEventListener('contextmenu', function(e) {
                     return _this2.itemOption(e);
+                  });
+                  _Animation__WEBPACK_IMPORTED_MODULE_4__['Animation'].Animate(this.item, {
+                    name: 'bubble',
+                    dir: _Animation__WEBPACK_IMPORTED_MODULE_4__['AnimeDir'].Normal,
+                    animeType: 'cubic-bezier(1.000, 1.030, 0.045, 1.475)'
                   });
                   console.log('Note created');
                 }
@@ -1468,7 +1636,12 @@
                   this.item.addEventListener('contextmenu', function(e) {
                     return _this3.itemOption(e);
                   });
-                  console.log('Folder created');
+                  _Animation__WEBPACK_IMPORTED_MODULE_4__['Animation'].Animate(this.item, {
+                    name: 'bubble',
+                    dir: _Animation__WEBPACK_IMPORTED_MODULE_4__['AnimeDir'].Normal,
+                    animeType: 'cubic-bezier(1.000, 1.030, 0.045, 1.475)'
+                  });
+                  console.log('Folder created - '.concat(this.folderType));
                 }
               },
               {
@@ -1793,9 +1966,38 @@
         /* harmony import */ var _styles_hello_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/ __webpack_require__.n(
           _styles_hello_css__WEBPACK_IMPORTED_MODULE_0__
         );
+        /* harmony import */ var _grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! ./grid */ './src/scripts/grid.js'
+        );
+        /* harmony import */ var _breadcrumbs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+          /*! ./breadcrumbs */ './src/scripts/breadcrumbs.js'
+        );
+        /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+          /*! ./menu */ './src/scripts/menu.js'
+        );
+        /* harmony import */ var _classes_Animation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+          /*! ../classes/Animation */ './src/classes/Animation.js'
+        );
+
+        function loadApp(hello) {
+          Object(_breadcrumbs__WEBPACK_IMPORTED_MODULE_2__['initBreadcrumbs'])();
+          Object(_grid__WEBPACK_IMPORTED_MODULE_1__['initGrid'])();
+          Object(_menu__WEBPACK_IMPORTED_MODULE_3__['initMenu'])();
+          _classes_Animation__WEBPACK_IMPORTED_MODULE_4__['Animation'].Animate(
+            hello,
+            {
+              name: 'fading',
+              dir: _classes_Animation__WEBPACK_IMPORTED_MODULE_4__['AnimeDir'].Reverse
+            },
+            function() {
+              document.body.removeChild(hello);
+              hello = null;
+            }
+          );
+        }
 
         var initHello = function initHello() {
-          // localStorage.clear();
+          localStorage.clear();
           var isVisited = localStorage.getItem('visited');
 
           if (!isVisited) {
@@ -1803,11 +2005,16 @@
             var clone = templateItem.content.cloneNode(true);
             var hello = clone.querySelector('.hello');
             document.body.appendChild(hello);
+            _classes_Animation__WEBPACK_IMPORTED_MODULE_4__['Animation'].Animate(hello, {
+              name: 'fading',
+              dir: _classes_Animation__WEBPACK_IMPORTED_MODULE_4__['AnimeDir'].Normal
+            });
             localStorage.setItem('visited', true);
             hello.querySelector('input[type="button"]').addEventListener('click', function() {
-              document.body.removeChild(hello);
-              hello = null;
+              loadApp(hello);
             });
+          } else {
+            loadApp();
           }
         };
 
@@ -1831,22 +2038,10 @@
         /* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
           /*! ./hello */ './src/scripts/hello.js'
         );
-        /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-          /*! ./menu */ './src/scripts/menu.js'
-        );
-        /* harmony import */ var _grid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-          /*! ./grid */ './src/scripts/grid.js'
-        );
-        /* harmony import */ var _breadcrumbs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-          /*! ./breadcrumbs */ './src/scripts/breadcrumbs.js'
-        );
 
         var initApp = function initApp() {
           document.addEventListener('DOMContentLoaded', function() {
-            Object(_breadcrumbs__WEBPACK_IMPORTED_MODULE_4__['initBreadcrumbs'])();
             Object(_hello__WEBPACK_IMPORTED_MODULE_1__['initHello'])();
-            Object(_grid__WEBPACK_IMPORTED_MODULE_3__['initGrid'])();
-            Object(_menu__WEBPACK_IMPORTED_MODULE_2__['initMenu'])();
             console.log('App inited');
           });
         };
@@ -1882,11 +2077,15 @@
         /* harmony import */ var _classes_Dialog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
           /*! ../classes/Dialog */ './src/classes/Dialog.js'
         );
+        /* harmony import */ var _classes_Animation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+          /*! ../classes/Animation */ './src/classes/Animation.js'
+        );
 
         var initMenu = function initMenu() {
           var templateMenu = document.getElementById('template__menu');
           var clone = templateMenu.content.cloneNode(true);
-          document.body.insertAdjacentElement('afterbegin', clone.querySelector('.menu'));
+          var menu = clone.querySelector('.menu');
+          document.body.insertAdjacentElement('afterbegin', menu);
           document.getElementById('menu__create_note').addEventListener('click', function() {
             return new _classes_Editor__WEBPACK_IMPORTED_MODULE_2__['Editor']();
           });
@@ -1895,6 +2094,10 @@
               'Folder name:',
               _grid__WEBPACK_IMPORTED_MODULE_1__['grid'].AddFolder.bind(_grid__WEBPACK_IMPORTED_MODULE_1__['grid'])
             );
+          });
+          _classes_Animation__WEBPACK_IMPORTED_MODULE_4__['Animation'].Animate(menu, {
+            name: 'fading-moving-left',
+            dir: _classes_Animation__WEBPACK_IMPORTED_MODULE_4__['AnimeDir'].Normal
           });
           console.log('Menu inited');
         };

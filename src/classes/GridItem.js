@@ -2,6 +2,7 @@ import { Utils } from './Utils';
 import { Editor } from '../classes/Editor';
 import { grid } from '../scripts/grid';
 import { breadcrumbs } from '../scripts/breadcrumbs';
+import { Animation, AnimeDir } from './Animation';
 
 const colors = [
   ['#EDE604', '#000'],
@@ -124,6 +125,8 @@ export class GridItem {
 
     grid.UnselectAll();
 
+    Animation.Animate(this.item, { name: 'shaking', dir: AnimeDir.Normal, time: 300 });
+
     console.log('Item dropped');
   }
 
@@ -161,6 +164,12 @@ export class GridItem {
     this.item.addEventListener('dragend', e => this.itemDragEnd(e));
     this.item.addEventListener('dblclick', e => this.itemOpen(e));
     this.item.addEventListener('contextmenu', e => this.itemOption(e));
+
+    Animation.Animate(this.item, {
+      name: 'bubble',
+      dir: AnimeDir.Normal,
+      animeType: 'cubic-bezier(1.000, 1.030, 0.045, 1.475)'
+    });
 
     console.log('Note created');
   }
@@ -207,7 +216,13 @@ export class GridItem {
     this.item.addEventListener('dblclick', e => this.itemOpen(e));
     this.item.addEventListener('contextmenu', e => this.itemOption(e));
 
-    console.log('Folder created');
+    Animation.Animate(this.item, {
+      name: 'bubble',
+      dir: AnimeDir.Normal,
+      animeType: 'cubic-bezier(1.000, 1.030, 0.045, 1.475)'
+    });
+
+    console.log(`Folder created - ${this.folderType}`);
   }
 
   get Handle() {

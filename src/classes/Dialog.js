@@ -1,9 +1,11 @@
 import { initDialog } from '../scripts/dialog';
+import { Animation, AnimeDir } from './Animation';
 
 export class Dialog {
   static Prompt(question, callback) {
-    const dialogTemplate = initDialog();
+    this.dialogTemplate = initDialog();
 
+    this.dialog = this.dialogTemplate.querySelector('.dialog');
     const input = document.createElement('input');
     const submit = document.createElement('button');
     const reject = document.createElement('button');
@@ -15,19 +17,29 @@ export class Dialog {
     input.placeholder = question;
 
     submit.addEventListener('click', () => {
-      document.body.removeChild(dialogTemplate);
+      this.close(this.dialogTemplate);
       callback(input.value);
     });
-    reject.addEventListener('click', () => document.body.removeChild(dialogTemplate));
+    reject.addEventListener('click', () => this.close(this.dialogTemplate));
 
-    dialogTemplate.querySelector('.content').appendChild(input);
-    dialogTemplate.querySelector('.controls').appendChild(submit);
-    dialogTemplate.querySelector('.controls').appendChild(reject);
+    this.dialog.querySelector('.content').appendChild(input);
+    this.dialog.querySelector('.controls').appendChild(submit);
+    this.dialog.querySelector('.controls').appendChild(reject);
 
-    document.body.appendChild(dialogTemplate);
+    document.body.appendChild(this.dialogTemplate);
+
+    Animation.Animate(this.dialogTemplate, { name: 'fading', dir: AnimeDir.Normal });
+    Animation.Animate(this.dialog, { name: 'fading-moving-top', dir: AnimeDir.Normal });
   }
   static Confirm() {}
   static Alert() {}
   static DatePicker() {}
   static Notify() {}
+
+  static close(obj) {
+    Animation.Animate(this.dialog, { name: 'fading-moving-top', dir: AnimeDir.Reverse });
+    Animation.Animate(this.dialogTemplate, { name: 'fading', dir: AnimeDir.Reverse }, () => {
+      document.body.removeChild(obj);
+    });
+  }
 }

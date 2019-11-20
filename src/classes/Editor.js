@@ -1,6 +1,7 @@
 import '../styles/editor.css';
 
 import { grid } from '../scripts/grid';
+import { Animation, AnimeDir } from './Animation';
 
 export class Editor {
   constructor(target) {
@@ -12,6 +13,7 @@ export class Editor {
 
     this.editor = clone.querySelector('.editor');
 
+    this.note = this.editor.querySelector('.note');
     this.textarea = this.editor.querySelector('.textarea__note_content');
     this.inputTitle = this.editor.querySelector('.input__note_title');
     this.submit = this.editor.querySelector('.submit');
@@ -41,11 +43,17 @@ export class Editor {
 
     document.body.appendChild(this.editor);
 
+    Animation.Animate(this.editor, { name: 'fading', dir: AnimeDir.Normal });
+    Animation.Animate(this.note, { name: 'fading-moving-top', dir: AnimeDir.Normal });
+
     console.log('Editor created');
   }
 
   close() {
-    document.body.removeChild(this.editor);
-    this.editor = null;
+    Animation.Animate(this.note, { name: 'fading-moving-top', dir: AnimeDir.Reverse });
+    Animation.Animate(this.editor, { name: 'fading', dir: AnimeDir.Reverse }, () => {
+      document.body.removeChild(this.editor);
+      this.editor = null;
+    });
   }
 }
