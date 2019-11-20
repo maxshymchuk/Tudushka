@@ -1,4 +1,5 @@
 import { Animation, AnimeDir } from '../classes/Animation';
+import { grid } from '../scripts/grid';
 
 export class List {
   constructor() {
@@ -21,6 +22,7 @@ export class List {
   }
 
   Add(record) {
+    grid.Unselect(record);
     record.item.removeAttribute('draggable');
     this.list.push(record);
   }

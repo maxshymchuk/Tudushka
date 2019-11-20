@@ -261,7 +261,7 @@
         // Module
         exports.push([
           module.i,
-          'html *::-webkit-scrollbar {\n  width: 10px;\n}\nhtml *::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: transparent;\n  box-sizing: border-box;\n  border: 2px solid rgba(0, 0, 0, 0.2);\n}\n\nbody {\n  margin: 0;\n  font-family: "Zilla Slab", serif;\n}\n\ninput,\nbutton,\ntextarea {\n  font-family: "Zilla Slab", serif;\n}\ninput:focus,\nbutton:focus,\ntextarea:focus {\n  outline: none;\n}\n',
+          "html *::-webkit-scrollbar {\n  width: 10px;\n}\nhtml *::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: transparent;\n  box-sizing: border-box;\n  border: 2px solid rgba(0, 0, 0, 0.2);\n}\n\nbody {\n  margin: 0;\n  font-family: 'Zilla Slab', serif;\n}\n\ninput,\nbutton,\ntextarea {\n  font-family: 'Zilla Slab', serif;\n}\ninput:focus,\nbutton:focus,\ntextarea:focus {\n  outline: none;\n}\n",
           ''
         ]);
 
@@ -325,7 +325,7 @@
             ___CSS_LOADER_URL___1___ +
             ') no-repeat center center;\n  background-size: 80%;\n}\n.menu button.menu__open_completed:before {\n  background: url(' +
             ___CSS_LOADER_URL___2___ +
-            ') no-repeat center center;\n  background-size: 80%;\n}\n.menu button:hover {\n  background-color: var(--menu-button-hover-color);\n}\n.menu button.menu__open_completed {\n  background-color: var(--accent-color);\n  color: #FFF;\n  font-weight: bold;\n}\n.menu button:not(:last-child) {\n  margin-right: 10px;\n}\n',
+            ') no-repeat center center;\n  background-size: 80%;\n}\n.menu button:hover {\n  background-color: var(--menu-button-hover-color);\n}\n.menu button.menu__open_completed {\n  background-color: var(--accent-color);\n  color: #fff;\n  font-weight: bold;\n}\n.menu button:not(:last-child) {\n  margin-right: 10px;\n}\n',
           ''
         ]);
 
@@ -1450,8 +1450,6 @@
               {
                 key: 'itemSelect',
                 value: function itemSelect(e) {
-                  console.log('asdasd');
-
                   if (e.target.checked) {
                     _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Select(this);
                   } else {
@@ -1468,7 +1466,7 @@
               {
                 key: 'itemDragEnd',
                 value: function itemDragEnd(e) {
-                  // grid.Unselect(e.target);
+                  e.preventDefault();
                 }
               },
               {
@@ -1540,7 +1538,7 @@
                   if (_scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected) {
                     for (var i = 0; i < _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected.length; i++) {
                       _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i].checkboxElem.checked = false;
-                      if (_scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i] === this) break;
+                      if (_scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i] === this) continue;
 
                       switch (_scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i].itemType) {
                         case ItemType.note:
@@ -1772,6 +1770,9 @@
         /* harmony import */ var _classes_Animation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
           /*! ../classes/Animation */ './src/classes/Animation.js'
         );
+        /* harmony import */ var _scripts_grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! ../scripts/grid */ './src/scripts/grid.js'
+        );
         function _classCallCheck(instance, Constructor) {
           if (!(instance instanceof Constructor)) {
             throw new TypeError('Cannot call a class as a function');
@@ -1831,6 +1832,7 @@
               {
                 key: 'Add',
                 value: function Add(record) {
+                  _scripts_grid__WEBPACK_IMPORTED_MODULE_1__['grid'].Unselect(record);
                   record.item.removeAttribute('draggable');
                   this.list.push(record);
                 }
@@ -1847,8 +1849,6 @@
                   var _this2 = this;
 
                   this.list.forEach(function(i) {
-                    console.log(i);
-
                     _this2.listElem.appendChild(i.Handle);
                   });
                   document.body.appendChild(this.listSectionElem);

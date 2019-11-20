@@ -56,7 +56,7 @@ export class GridItem {
   }
 
   itemDragEnd(e) {
-    // grid.Unselect(e.target);
+    e.preventDefault();
   }
 
   itemDragStart(e) {
@@ -104,7 +104,7 @@ export class GridItem {
     if (grid.Selected) {
       for (let i = 0; i < grid.Selected.length; i++) {
         grid.Selected[i].checkboxElem.checked = false;
-        if (grid.Selected[i] === this) break;
+        if (grid.Selected[i] === this) continue;
         switch (grid.Selected[i].itemType) {
           case ItemType.note:
             switch (this.folderType) {
