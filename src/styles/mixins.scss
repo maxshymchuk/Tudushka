@@ -9,7 +9,8 @@
   line-height: 20px;
   cursor: pointer;
   &.menu__create_note:before,
-  &.menu__create_folder:before {
+  &.menu__create_folder:before,
+  &.menu__open_completed:before {
     content: '';
     display: block;
     width: 20px;
@@ -23,6 +24,10 @@
   }
   &.menu__create_folder:before {
     background: url('../images/create_folder.svg') no-repeat center center;
+    background-size: 80%;
+  }
+  &.menu__open_completed:before {
+    background: url('../images/complete.svg') no-repeat center center;
     background-size: 80%;
   }
   &:hover {
@@ -67,4 +72,17 @@
   flex-wrap: wrap;
   width: 100%;
   background-color: #fff;
+}
+
+@mixin placeholder {
+  display: flex;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: var(--inactive-background-color);
+  z-index: 999;
 }

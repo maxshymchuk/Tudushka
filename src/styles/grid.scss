@@ -8,6 +8,7 @@
   grid: 240px / repeat(auto-fill, 200px);
   grid-gap: var(--grid-gap);
   user-select: none;
+  position: relative;
   .item {
     display: flex;
     flex-direction: column;
@@ -16,6 +17,24 @@
     border-radius: var(--border-radius);
     overflow: hidden;
     box-sizing: border-box;
+    position: relative;
+    .complete {
+      position: absolute;
+      border: 0;
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+      border-radius: 50%;
+      bottom: -40px;
+      right: 0;
+      background: url('../images/submit.svg') no-repeat center center var(--hover-button-color);
+      background-size: 60%;
+      cursor: pointer;
+      transition: bottom var(--transition-time), background-color var(--transition-time);
+      &:hover {
+        background-color: var(--placeholder-color);
+      }
+    }
     .title-section {
       display: flex;
       align-items: center;
@@ -51,6 +70,9 @@
       &:not(:checked) + .checkbox__label {
         border: 5px solid transparent;
       }
+    }
+    &:hover .complete {
+      bottom: 0;
     }
     &:hover .checkbox + .checkbox__label {
       box-shadow: inset 0 0 0 5px var(--hover-button-color);

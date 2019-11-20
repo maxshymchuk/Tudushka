@@ -89,6 +89,17 @@
     transform: rotate(0);
   }
 }
+@keyframes disappearing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .editor {
   display: flex;
   position: fixed;
@@ -99,6 +110,7 @@
   height: 100%;
   z-index: 1;
   background-color: var(--inactive-background-color);
+  z-index: 999;
 }
 .editor .note {
   position: relative;

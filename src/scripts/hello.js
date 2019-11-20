@@ -3,13 +3,14 @@ import '../styles/hello.css';
 import { initGrid } from './grid';
 import { initBreadcrumbs } from './breadcrumbs';
 import { initMenu } from './menu';
-
+import { initList } from './list';
 import { Animation, AnimeDir } from '../classes/Animation';
 
 function loadApp(hello) {
   initBreadcrumbs();
   initGrid();
   initMenu();
+  initList();
   Animation.Animate(hello, { name: 'fading', dir: AnimeDir.Reverse }, () => {
     document.body.removeChild(hello);
     hello = null;

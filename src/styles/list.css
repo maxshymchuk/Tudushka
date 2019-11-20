@@ -36,56 +36,65 @@
   --folder-hover-color: #ddd;
 }
 
-.menu {
+.list-section {
+  display: flex;
   position: fixed;
-  top: 20px;
-  margin-left: 20px;
-  padding: 10px;
-  background-color: var(--menu-color);
-  border-radius: var(--border-radius);
-  font-size: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
+  background-color: var(--inactive-background-color);
+  z-index: 999;
+  overflow-y: hidden;
 }
-.menu button {
-  border-radius: var(--button-border-radius);
+.list-section .reject {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
   border: 0;
-  background-color: var(--menu-button-color);
-  margin: 0;
-  padding: 5px 10px;
-  line-height: 20px;
+  border-radius: 50%;
+  background: url('../images/close.svg') no-repeat center center;
+  background-size: 40%;
   cursor: pointer;
-  font-size: 1rem;
+  transition: background-color var(--transition-time);
 }
-.menu button.menu__create_note:before,
-.menu button.menu__create_folder:before,
-.menu button.menu__open_completed:before {
-  content: '';
-  display: block;
-  width: 20px;
-  height: 20px;
-  float: left;
-  margin-right: 5px;
+.list-section .reject:hover {
+  background-color: var(--hover-button-color);
 }
-.menu button.menu__create_note:before {
-  background: url('../images/create_note.svg') no-repeat center center;
-  background-size: 80%;
+.list-section .list {
+  width: 100%;
+  max-width: 500px;
+  max-height: 100%;
+  margin: auto;
+  position: relative;
 }
-.menu button.menu__create_folder:before {
-  background: url('../images/create_folder.svg') no-repeat center center;
-  background-size: 80%;
+.list-section .list .item {
+  height: auto;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 10px 0;
 }
-.menu button.menu__open_completed:before {
-  background: url('../images/complete.svg') no-repeat center center;
-  background-size: 80%;
+.list-section .list .item .title {
+  font-size: 2rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu button:hover {
-  background-color: var(--menu-button-hover-color);
+.list-section .list .item .content {
+  font-size: 1.2rem;
 }
-.menu button.menu__open_completed {
-  background-color: var(--accent-color);
-  color: #fff;
-  font-weight: bold;
+.list-section .list .item .content p {
+  margin: 0;
 }
-.menu button:not(:last-child) {
-  margin-right: 10px;
+.list-section .list .item label {
+  display: none;
+}
+.list-section .list .item input {
+  display: none;
 }

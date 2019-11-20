@@ -26,4 +26,5 @@
   border-radius: var(--border-radius);
   padding: 0 10px;
   background-color: var(--menu-color);
+  z-index: 1;
 }

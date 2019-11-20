@@ -3,6 +3,7 @@ import { Editor } from '../classes/Editor';
 import { grid } from '../scripts/grid';
 import { breadcrumbs } from '../scripts/breadcrumbs';
 import { Animation, AnimeDir } from './Animation';
+import { list } from '../scripts/list';
 
 const colors = [
   ['#EDE604', '#000'],
@@ -89,6 +90,15 @@ export class GridItem {
     console.log('Item opened');
   }
 
+  itemComplete(e) {
+    list.Add(this);
+    Animation.Animate(this.item, { name: 'disappearing', dir: AnimeDir.Normal }, () => {
+      grid.RemoveItem(this);
+    });
+
+    console.log('Item completed');
+  }
+
   itemDrop(e) {
     e.preventDefault();
     if (grid.Selected) {
@@ -119,13 +129,12 @@ export class GridItem {
             }
             break;
         }
-        grid.RemoveItem(grid.Selected[i].itemType, grid.Selected[i]);
+        grid.RemoveItem(grid.Selected[i]);
+        Animation.Animate(this.item, { name: 'shaking', dir: AnimeDir.Normal, time: 300 });
       }
     }
 
     grid.UnselectAll();
-
-    Animation.Animate(this.item, { name: 'shaking', dir: AnimeDir.Normal, time: 300 });
 
     console.log('Item dropped');
   }
@@ -142,6 +151,7 @@ export class GridItem {
     this.item = clone.querySelector('.item');
     this.item.setAttribute('id', this.id);
 
+    this.completeElem = clone.querySelector('.complete');
     this.checkboxElem = clone.querySelector('.checkbox');
     this.checkboxLabelElem = clone.querySelector('.checkbox__label');
     this.titleSectionElem = clone.querySelector('.title-section');
@@ -158,6 +168,7 @@ export class GridItem {
     this.titleSectionElem.querySelector('.title').innerText = this.title;
     this.contentElem.innerHTML = marked(this.content);
 
+    this.completeElem.addEventListener('click', e => this.itemComplete(e));
     this.checkboxElem.addEventListener('change', e => this.itemSelect(e));
 
     this.item.addEventListener('dragstart', e => this.itemDragStart(e));

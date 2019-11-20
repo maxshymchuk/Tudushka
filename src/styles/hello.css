@@ -78,7 +78,8 @@
   transition: all 0.5s;
 }
 .hello .button.menu__create_note:before,
-.hello .button.menu__create_folder:before {
+.hello .button.menu__create_folder:before,
+.hello .button.menu__open_completed:before {
   content: '';
   display: block;
   width: 20px;
@@ -92,6 +93,10 @@
 }
 .hello .button.menu__create_folder:before {
   background: url('../images/create_folder.svg') no-repeat center center;
+  background-size: 80%;
+}
+.hello .button.menu__open_completed:before {
+  background: url('../images/complete.svg') no-repeat center center;
   background-size: 80%;
 }
 .hello .button:hover {

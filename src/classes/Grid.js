@@ -32,8 +32,8 @@ export class Grid {
     console.log('Folder added');
   }
 
-  RemoveItem(type, item) {
-    switch (type) {
+  RemoveItem(item) {
+    switch (item.itemType) {
       case ItemType.note:
         this.currentDir.notes.splice(this.currentDir.notes.indexOf(item), 1);
         break;

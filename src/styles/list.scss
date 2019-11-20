@@ -1,0 +1,56 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.list-section {
+  @include placeholder;
+  overflow-y: hidden;
+  .reject {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: url('../images/close.svg') no-repeat center center;
+    background-size: 40%;
+    cursor: pointer;
+    transition: background-color var(--transition-time);
+    &:hover {
+      background-color: var(--hover-button-color);
+    }
+  }
+  .list {
+    width: 100%;
+    max-width: 500px;
+    max-height: 100%;
+    margin: auto;
+    position: relative;
+    .item {
+      height: auto;
+      padding: 10px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      margin: 10px 0;
+      .title {
+        font-size: 2rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .content {
+        font-size: 1.2rem;
+        p {
+          margin: 0;
+        }
+      }
+      label {
+        display: none;
+      }
+      input {
+        display: none;
+      }
+    }
+  }
+}

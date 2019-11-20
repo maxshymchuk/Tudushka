@@ -9,9 +9,15 @@
   background-color: var(--menu-color);
   border-radius: var(--border-radius);
   font-size: 0;
+  z-index: 1;
   button {
     @include button-menu;
     font-size: 1rem;
+    &.menu__open_completed {
+      background-color: var(--accent-color);
+      color: #fff;
+      font-weight: bold;
+    }
   }
   button:not(:last-child) {
     margin-right: 10px;
