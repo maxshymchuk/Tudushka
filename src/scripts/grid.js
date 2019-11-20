@@ -15,7 +15,7 @@ export const initGrid = () => {
 
   grid = new Grid(gridElem);
   grid.CurrentDir = new GridItem();
-  grid.CurrentDir.createFolder(FolderType.folder, 'root');
+  grid.CurrentDir.CreateFolder(FolderType.folder, 'root');
 
   console.log('Grid inited');
 };

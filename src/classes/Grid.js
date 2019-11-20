@@ -3,11 +3,12 @@ import { GridItem, ItemType, FolderType } from './GridItem';
 export class Grid {
   constructor(element) {
     this.grid = element;
+    this.selected = [];
   }
 
   AddNote(title, content) {
     const gridItem = new GridItem();
-    gridItem.createNote(title, content);
+    gridItem.CreateNote(title, content);
     this.currentDir.notes.push(gridItem);
     this.Redraw();
 
@@ -18,8 +19,8 @@ export class Grid {
     const gridItem = new GridItem();
     const backFolder = new GridItem();
 
-    gridItem.createFolder(FolderType.folder, title);
-    backFolder.createFolder(FolderType.backFolder, '...');
+    gridItem.CreateFolder(FolderType.folder, title);
+    backFolder.CreateFolder(FolderType.backFolder, '...');
 
     gridItem.folders.push(backFolder);
 
@@ -34,10 +35,10 @@ export class Grid {
   RemoveItem(type, item) {
     switch (type) {
       case ItemType.note:
-        delete this.currentDir.notes[this.currentDir.notes.indexOf(item)];
+        this.currentDir.notes.splice(this.currentDir.notes.indexOf(item), 1);
         break;
       case ItemType.folder:
-        delete this.currentDir.folders[this.currentDir.folders.indexOf(item)];
+        this.currentDir.folders.splice(this.currentDir.folders.indexOf(item), 1);
         break;
     }
     this.Redraw();
@@ -55,7 +56,7 @@ export class Grid {
         }
       });
     this.currentDir.notes &&
-      this.currentDir.notes.reverse().forEach(n => {
+      this.currentDir.notes.forEach(n => {
         this.grid.appendChild(n.Handle);
       });
   }
@@ -70,7 +71,26 @@ export class Grid {
 
   set CurrentDir(folder) {
     this.currentDir = folder;
-
     this.Redraw();
+  }
+
+  get Selected() {
+    return this.selected;
+  }
+
+  isSelected(record) {
+    return this.selected.includes(record);
+  }
+
+  Select(record) {
+    this.selected.push(record);
+  }
+
+  Unselect(record) {
+    this.selected.splice(this.selected.indexOf(record), 1);
+  }
+
+  UnselectAll() {
+    this.selected = [];
   }
 }

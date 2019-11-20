@@ -1,4 +1,5 @@
 import { Utils } from './Utils';
+import { Editor } from '../classes/Editor';
 import { grid } from '../scripts/grid';
 import { breadcrumbs } from '../scripts/breadcrumbs';
 
@@ -40,7 +41,93 @@ export class GridItem {
     this.color = colors[randNum][1];
   }
 
-  createNote(title, content) {
+  itemSelect(e) {
+    if (e.target.checked) {
+      grid.Select(this);
+    } else {
+      grid.Unselect(this);
+    }
+  }
+
+  itemDragOver(e) {
+    e.preventDefault();
+  }
+
+  itemDragEnd(e) {
+    // grid.Unselect(e.target);
+  }
+
+  itemDragStart(e) {
+    if (this.itemType === ItemType.note || this.folderType === FolderType.folder) {
+      if (!grid.isSelected(this)) grid.Select(this);
+    }
+
+    console.log('Item drag started');
+  }
+
+  itemOption(e) {
+    e.preventDefault();
+  }
+
+  itemOpen(e) {
+    switch (this.itemType) {
+      case ItemType.folder:
+        if (this.folderType === FolderType.backFolder) {
+          grid.CurrentDir = this.prevFolder;
+          breadcrumbs.RemovePath(this.title);
+        } else {
+          grid.CurrentDir = this;
+          breadcrumbs.AddPath(this.title);
+        }
+        break;
+      case ItemType.note:
+        new Editor(this);
+        break;
+    }
+
+    console.log('Item opened');
+  }
+
+  itemDrop(e) {
+    e.preventDefault();
+    if (grid.Selected) {
+      for (let i = 0; i < grid.Selected.length; i++) {
+        grid.Selected[i].checkboxElem.checked = false;
+        if (grid.Selected[i] === this) break;
+        switch (grid.Selected[i].itemType) {
+          case ItemType.note:
+            switch (this.folderType) {
+              case FolderType.folder:
+                this.notes.push(grid.Selected[i]);
+                break;
+              case FolderType.backFolder:
+                this.prevFolder.notes.push(grid.Selected[i]);
+                break;
+            }
+            break;
+          case ItemType.folder:
+            switch (this.folderType) {
+              case FolderType.folder:
+                grid.Selected[i].folders.forEach(f => (f.prevFolder = this));
+                this.folders.push(grid.Selected[i]);
+                break;
+              case FolderType.backFolder:
+                grid.Selected[i].folders.forEach(f => (f.prevFolder = this.prevFolder));
+                this.prevFolder.folders.push(grid.Selected[i]);
+                break;
+            }
+            break;
+        }
+        grid.RemoveItem(grid.Selected[i].itemType, grid.Selected[i]);
+      }
+    }
+
+    grid.UnselectAll();
+
+    console.log('Item dropped');
+  }
+
+  CreateNote(title, content) {
     this.itemType = ItemType.note;
 
     if (title) this.title = title;
@@ -52,41 +139,33 @@ export class GridItem {
     this.item = clone.querySelector('.item');
     this.item.setAttribute('id', this.id);
 
-    this.titleElem = this.item.querySelector('.title');
-    this.contentElem = this.item.querySelector('.content');
-    this.footerElem = this.item.querySelector('.footer');
+    this.checkboxElem = clone.querySelector('.checkbox');
+    this.checkboxLabelElem = clone.querySelector('.checkbox__label');
+    this.titleSectionElem = clone.querySelector('.title-section');
+    this.contentElem = clone.querySelector('.content');
+    this.footerElem = clone.querySelector('.footer');
 
     this.item.style.backgroundColor = this.backgroundColor;
     this.item.style.color = this.color;
-    this.titleElem.style.borderColor = this.color;
+    this.titleSectionElem.style.borderColor = this.color;
 
-    this.titleElem.innerText = this.title;
-    this.contentElem.innerHTML = `<span>${this.content}</span>`;
+    this.checkboxElem.setAttribute('id', `checkbox_${this.id}`);
+    this.checkboxLabelElem.setAttribute('for', `checkbox_${this.id}`);
 
-    this.item.addEventListener('dragstart', e => {
-      e.dataTransfer.setData(
-        'text',
-        JSON.stringify({
-          type: this.itemType,
-          id: this.id
-        })
-      );
-    });
+    this.titleSectionElem.querySelector('.title').innerText = this.title;
+    this.contentElem.innerHTML = marked(this.content);
 
-    this.item.addEventListener('dblclick', () => {
-      alert(this.Id);
-    });
+    this.checkboxElem.addEventListener('change', e => this.itemSelect(e));
+
+    this.item.addEventListener('dragstart', e => this.itemDragStart(e));
+    this.item.addEventListener('dragend', e => this.itemDragEnd(e));
+    this.item.addEventListener('dblclick', e => this.itemOpen(e));
+    this.item.addEventListener('contextmenu', e => this.itemOption(e));
 
     console.log('Note created');
   }
 
-  // folder = {
-  //   title: string;
-  //   prevFolder: GridItem;
-  //   folders: [];
-  //   notes: [];
-  // }
-  createFolder(folderType, title) {
+  CreateFolder(folderType, title) {
     this.itemType = ItemType.folder;
     this.folderType = folderType;
 
@@ -98,54 +177,35 @@ export class GridItem {
     this.item = clone.querySelector('.item');
     this.item.setAttribute('id', this.id);
 
-    this.item.innerText = this.title;
+    this.checkboxElem = clone.querySelector('.checkbox');
+    this.checkboxLabelElem = clone.querySelector('.checkbox__label');
+    this.titleSectionElem = clone.querySelector('.title-section');
 
-    this.prevFolder = grid.CurrentDir;
+    this.checkboxElem.setAttribute('id', `checkbox_${this.id}`);
+    this.checkboxLabelElem.setAttribute('for', `checkbox_${this.id}`);
+
+    this.titleSectionElem.querySelector('.title').innerText = this.title;
+
+    if (this.folderType === FolderType.backFolder) {
+      this.prevFolder = grid.CurrentDir;
+    }
     this.folders = [];
     this.notes = [];
 
-    this.item.addEventListener('dragstart', e => {
-      if (this.folderType === FolderType.folder) {
-        e.dataTransfer.setData(
-          'text',
-          JSON.stringify({
-            type: this.itemType,
-            id: this.id
-          })
-        );
-      }
-    });
+    if (this.folderType === FolderType.backFolder) {
+      this.item.removeAttribute('draggable');
+      this.titleSectionElem.removeChild(this.checkboxElem);
+      this.titleSectionElem.removeChild(this.checkboxLabelElem);
+    } else {
+      this.checkboxElem.addEventListener('change', e => this.itemSelect(e));
+    }
 
-    this.item.addEventListener('dragover', e => e.preventDefault());
-
-    this.item.addEventListener('drop', e => {
-      e.preventDefault();
-      let elem = null;
-      const data = JSON.parse(e.dataTransfer.getData('text'));
-      console.log(data);
-      switch (data.type) {
-        case ItemType.note:
-          elem = grid.currentDir.notes.filter(n => n.Id === data.id)[0];
-          this.notes.push(elem);
-          break;
-        case ItemType.folder:
-          elem = grid.currentDir.folders.filter(f => f.Id === data.id)[0];
-          elem.folders.forEach(f => (f.prevFolder = this));
-          this.folders.push(elem);
-          break;
-      }
-      grid.RemoveItem(data.type, elem);
-    });
-
-    this.item.addEventListener('dblclick', () => {
-      if (this.folderType === FolderType.backFolder) {
-        grid.CurrentDir = this.prevFolder;
-        breadcrumbs.RemovePath(this.title);
-      } else {
-        grid.CurrentDir = this;
-        breadcrumbs.AddPath(this.title);
-      }
-    });
+    this.item.addEventListener('dragstart', e => this.itemDragStart(e));
+    this.item.addEventListener('dragend', e => this.itemDragEnd(e));
+    this.item.addEventListener('dragover', e => this.itemDragOver(e));
+    this.item.addEventListener('drop', e => this.itemDrop(e));
+    this.item.addEventListener('dblclick', e => this.itemOpen(e));
+    this.item.addEventListener('contextmenu', e => this.itemOption(e));
 
     console.log('Folder created');
   }
@@ -166,7 +226,17 @@ export class GridItem {
     return this.title;
   }
 
+  set Title(title) {
+    this.title = title;
+    this.titleSectionElem.querySelector('.title').innerText = this.title;
+  }
+
   get Content() {
     return this.content;
+  }
+
+  set Content(content) {
+    this.content = content;
+    this.contentElem.innerHTML = marked(this.content);
   }
 }

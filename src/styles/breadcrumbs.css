@@ -1,11 +1,14 @@
 :root {
+  --accent-color: rgb(42, 209, 0);
+  --transition-time: 0.25s;
   --border-radius: 10px;
   --button-border-radius: 5px;
   --grid-gap: 20px;
   --box-shadow: 0 0 20px 0 var(--box-shadow-color);
   --box-shadow-color: #aaa;
   --hover-button-color: rgba(0, 0, 0, 0.1);
-  --inactive-background-color: rgba(255, 255, 255, 0.75);
+  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));
+  --inactive-background-opacity: 0.75;
   --menu-color: #ddd;
   --menu-button-color: #eee;
   --menu-button-hover-color: #eaeaea;

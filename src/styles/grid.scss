@@ -16,49 +16,70 @@
     border-radius: var(--border-radius);
     overflow: hidden;
     box-sizing: border-box;
-    transition: 0.25s;
-    &.folder {
-      padding: 10px;
-      text-align: center;
-      background: url('../images/folder.svg') no-repeat center center var(--folder-color);
-      background-size: 60%;
-      font-size: 1.4rem;
-      transition: background-color 0.2s;
-      &:hover {
-        background-color: var(--folder-hover-color);
-      }
-    }
-    &.note {
-      box-shadow: var(--box-shadow);
-      &:hover {
-        box-shadow: 0 0 10px 5px var(--box-shadow-color);
-      }
+    .title-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #000;
+      padding: 0 10px;
+      min-height: 40px;
       .title {
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        padding: 0 10px;
-        min-height: 40px;
         line-height: 40px;
         font-size: 1.5rem;
-        border-bottom: 1px solid #000;
+      }
+    }
+    .checkbox {
+      display: none;
+      & + .checkbox__label {
+        cursor: pointer;
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        position: relative;
+        border: 5px solid var(--hover-button-color);
+        transition: border var(--transition-time), box-shadow var(--transition-time);
+      }
+      &:checked + .checkbox__label {
+        border: 15px solid var(--hover-button-color);
+      }
+      &:not(:checked) + .checkbox__label {
+        border: 5px solid transparent;
+      }
+    }
+    &:hover .checkbox + .checkbox__label {
+      box-shadow: inset 0 0 0 5px var(--hover-button-color);
+    }
+    &.folder {
+      background: url('../images/folder.svg') no-repeat center 65% var(--folder-color);
+      background-size: 60%;
+      transition: background-color var(--transition-time);
+      &:hover {
+        background-color: var(--folder-hover-color);
+      }
+    }
+    &.note {
+      transition: box-shadow var(--transition-time);
+      box-shadow: var(--box-shadow);
+      &:hover {
+        box-shadow: 0 0 10px 5px var(--box-shadow-color);
       }
       .content {
         display: block;
         justify-self: stretch;
-        padding: 5px 10px;
-        margin: 2px; // scrollbar thumb border width
+        margin: 10px;
+        margin-top: 0;
+        padding-right: 5px;
         word-break: break-word;
         overflow-y: auto;
-      }
-      .footer {
-        margin-top: auto;
-        text-align: right;
-        span {
-          display: inline-block;
-          padding: 2px 20px;
-          cursor: pointer;
+        p {
+          padding: 5px 0;
+          margin: 0;
         }
       }
     }

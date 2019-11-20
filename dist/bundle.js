@@ -105,7 +105,7 @@
         // Module
         exports.push([
           module.i,
-          ':root {\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #AAA;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, 0.75);\n  --menu-color: #DDD;\n  --menu-button-color: #EEE;\n  --menu-button-hover-color: #EAEAEA;\n  --folder-color: #EEE;\n  --folder-hover-color: #DDD;\n}\n\n.breadcrumbs {\n  display: block;\n  position: fixed;\n  top: 90px;\n  left: 20px;\n  line-height: 20px;\n  border-radius: var(--border-radius);\n  padding: 0 10px;\n  background-color: var(--menu-color);\n}\n',
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.breadcrumbs {\n  display: block;\n  position: fixed;\n  top: 90px;\n  left: 20px;\n  line-height: 20px;\n  border-radius: var(--border-radius);\n  padding: 0 10px;\n  background-color: var(--menu-color);\n}\n',
           ''
         ]);
 
@@ -134,7 +134,7 @@
         // Module
         exports.push([
           module.i,
-          ':root {\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #AAA;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, 0.75);\n  --menu-color: #DDD;\n  --menu-button-color: #EEE;\n  --menu-button-hover-color: #EAEAEA;\n  --folder-color: #EEE;\n  --folder-hover-color: #DDD;\n}\n\n:root {\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #AAA;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, 0.75);\n  --menu-color: #DDD;\n  --menu-button-color: #EEE;\n  --menu-button-hover-color: #EAEAEA;\n  --folder-color: #EEE;\n  --folder-hover-color: #DDD;\n}\n\n.dialog-container {\n  display: flex;\n  position: fixed;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--inactive-background-color);\n}\n.dialog-container .dialog {\n  margin: auto;\n  box-shadow: var(--box-shadow);\n}\n.dialog-container .dialog .content input[type=text] {\n  width: 100%;\n  line-height: 40px;\n  padding: 0 20px;\n  font-size: 1.4rem;\n  font-weight: bold;\n  border: 0;\n  box-sizing: border-box;\n}\n.dialog-container .dialog .controls {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  background-color: #fff;\n}\n.dialog-container .dialog .controls button {\n  display: block;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background-color: transparent;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  cursor: pointer;\n}\n.dialog-container .dialog .controls button.submit {\n  background: url(' +
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.dialog-container {\n  display: flex;\n  position: fixed;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--inactive-background-color);\n}\n.dialog-container .dialog {\n  margin: auto;\n  box-shadow: var(--box-shadow);\n}\n.dialog-container .dialog .content input[type=text] {\n  width: 100%;\n  line-height: 40px;\n  padding: 0 20px;\n  font-size: 1.4rem;\n  font-weight: bold;\n  border: 0;\n  box-sizing: border-box;\n}\n.dialog-container .dialog .controls {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  background-color: #fff;\n}\n.dialog-container .dialog .controls button {\n  display: block;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background-color: transparent;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  cursor: pointer;\n}\n.dialog-container .dialog .controls button.submit {\n  background: url(' +
             ___CSS_LOADER_URL___0___ +
             ') no-repeat center center;\n  background-size: 50%;\n}\n.dialog-container .dialog .controls button.reject {\n  background: url(' +
             ___CSS_LOADER_URL___1___ +
@@ -167,11 +167,11 @@
         // Module
         exports.push([
           module.i,
-          ':root {\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #AAA;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, 0.75);\n  --menu-color: #DDD;\n  --menu-button-color: #EEE;\n  --menu-button-hover-color: #EAEAEA;\n  --folder-color: #EEE;\n  --folder-hover-color: #DDD;\n}\n\n:root {\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #AAA;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, 0.75);\n  --menu-color: #DDD;\n  --menu-button-color: #EEE;\n  --menu-button-hover-color: #EAEAEA;\n  --folder-color: #EEE;\n  --folder-hover-color: #DDD;\n}\n\n.editor {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 1;\n  background-color: var(--inactive-background-color);\n  overflow-y: auto;\n}\n.editor .note {\n  width: 100%;\n  height: 100%;\n  max-width: 900px;\n  margin: 0 auto;\n  padding-top: 80px;\n  box-sizing: border-box;\n  box-shadow: var(--box-shadow);\n}\n.editor .note .controls {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  background-color: #fff;\n  max-width: 900px;\n  position: fixed;\n  top: 0;\n  box-shadow: 0 4px 8px -2px var(--box-shadow-color);\n}\n.editor .note .controls .reject,\n.editor .note .controls .submit {\n  display: block;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background-color: transparent;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  cursor: pointer;\n}\n.editor .note .controls .reject.submit,\n.editor .note .controls .submit.submit {\n  background: url(' +
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.editor {\n  display: flex;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 1;\n  background-color: var(--inactive-background-color);\n  overflow-y: auto;\n}\n.editor .note {\n  width: 100%;\n  height: 70%;\n  max-width: 500px;\n  margin: auto;\n  padding-top: 80px;\n  box-sizing: border-box;\n  position: relative;\n  box-shadow: var(--box-shadow);\n}\n.editor .note .controls {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  background-color: #fff;\n  max-width: 500px;\n  position: absolute;\n  top: 0;\n}\n.editor .note .controls .reject,\n.editor .note .controls .submit {\n  display: block;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background-color: transparent;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  cursor: pointer;\n}\n.editor .note .controls .reject.submit,\n.editor .note .controls .submit.submit {\n  background: url(' +
             ___CSS_LOADER_URL___0___ +
             ') no-repeat center center;\n  background-size: 50%;\n}\n.editor .note .controls .reject.reject,\n.editor .note .controls .submit.reject {\n  background: url(' +
             ___CSS_LOADER_URL___1___ +
-            ') no-repeat center center;\n  background-size: 50%;\n}\n.editor .note .controls .reject:hover,\n.editor .note .controls .submit:hover {\n  background-color: var(--hover-button-color);\n}\n.editor .note .controls .input__note_title {\n  width: 100%;\n  line-height: 40px;\n  padding: 0 20px;\n  font-size: 1.4rem;\n  font-weight: bold;\n  border: 0;\n  box-sizing: border-box;\n}\n.editor .note .textarea__note_content {\n  display: block;\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  resize: none;\n  border: 0;\n  padding: 20px;\n  font-size: 1.2rem;\n}\n',
+            ') no-repeat center center;\n  background-size: 50%;\n}\n.editor .note .controls .reject:hover,\n.editor .note .controls .submit:hover {\n  background-color: var(--hover-button-color);\n}\n.editor .note .controls .input__note_title {\n  width: 100%;\n  line-height: 40px;\n  padding: 0 20px;\n  font-size: 1.4rem;\n  font-weight: bold;\n  border: 0;\n  box-sizing: border-box;\n  background-color: var(--folder-color);\n}\n.editor .note .textarea__note_content {\n  display: block;\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  resize: none;\n  border: 0;\n  padding: 20px;\n  font-size: 1.2rem;\n}\n',
           ''
         ]);
 
@@ -197,9 +197,9 @@
         // Module
         exports.push([
           module.i,
-          ':root {\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #AAA;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, 0.75);\n  --menu-color: #DDD;\n  --menu-button-color: #EEE;\n  --menu-button-hover-color: #EAEAEA;\n  --folder-color: #EEE;\n  --folder-hover-color: #DDD;\n}\n\n.grid {\n  display: grid;\n  justify-content: center;\n  padding: 110px 20px;\n  margin: 20px 0;\n  grid: 240px/repeat(auto-fill, 200px);\n  grid-gap: var(--grid-gap);\n  user-select: none;\n}\n.grid .item {\n  display: flex;\n  flex-direction: column;\n  width: 200px;\n  height: 240px;\n  border-radius: var(--border-radius);\n  overflow: hidden;\n  box-sizing: border-box;\n  transition: 0.25s;\n}\n.grid .item.folder {\n  padding: 10px;\n  text-align: center;\n  background: url(' +
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.grid {\n  display: grid;\n  justify-content: center;\n  padding: 110px 20px;\n  margin: 20px 0;\n  grid: 240px/repeat(auto-fill, 200px);\n  grid-gap: var(--grid-gap);\n  user-select: none;\n}\n.grid .item {\n  display: flex;\n  flex-direction: column;\n  width: 200px;\n  height: 240px;\n  border-radius: var(--border-radius);\n  overflow: hidden;\n  box-sizing: border-box;\n}\n.grid .item .title-section {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  border-bottom: 1px solid #000;\n  padding: 0 10px;\n  min-height: 40px;\n}\n.grid .item .title-section .title {\n  display: block;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  line-height: 40px;\n  font-size: 1.5rem;\n}\n.grid .item .checkbox {\n  display: none;\n}\n.grid .item .checkbox + .checkbox__label {\n  cursor: pointer;\n  min-width: 30px;\n  width: 30px;\n  height: 30px;\n  border-radius: 50%;\n  box-sizing: border-box;\n  position: relative;\n  border: 5px solid var(--hover-button-color);\n  transition: border var(--transition-time), box-shadow var(--transition-time);\n}\n.grid .item .checkbox:checked + .checkbox__label {\n  border: 15px solid var(--hover-button-color);\n}\n.grid .item .checkbox:not(:checked) + .checkbox__label {\n  border: 5px solid transparent;\n}\n.grid .item:hover .checkbox + .checkbox__label {\n  box-shadow: inset 0 0 0 5px var(--hover-button-color);\n}\n.grid .item.folder {\n  background: url(' +
             ___CSS_LOADER_URL___0___ +
-            ') no-repeat center center var(--folder-color);\n  background-size: 60%;\n  font-size: 1.4rem;\n  transition: background-color 0.2s;\n}\n.grid .item.folder:hover {\n  background-color: var(--folder-hover-color);\n}\n.grid .item.note {\n  box-shadow: var(--box-shadow);\n}\n.grid .item.note:hover {\n  box-shadow: 0 0 10px 5px var(--box-shadow-color);\n}\n.grid .item.note .title {\n  display: block;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  padding: 0 10px;\n  min-height: 40px;\n  line-height: 40px;\n  font-size: 1.5rem;\n  border-bottom: 1px solid #000;\n}\n.grid .item.note .content {\n  display: block;\n  justify-self: stretch;\n  padding: 5px 10px;\n  margin: 2px;\n  word-break: break-word;\n  overflow-y: auto;\n}\n.grid .item.note .footer {\n  margin-top: auto;\n  text-align: right;\n}\n.grid .item.note .footer span {\n  display: inline-block;\n  padding: 2px 20px;\n  cursor: pointer;\n}\n',
+            ') no-repeat center 65% var(--folder-color);\n  background-size: 60%;\n  transition: background-color var(--transition-time);\n}\n.grid .item.folder:hover {\n  background-color: var(--folder-hover-color);\n}\n.grid .item.note {\n  transition: box-shadow var(--transition-time);\n  box-shadow: var(--box-shadow);\n}\n.grid .item.note:hover {\n  box-shadow: 0 0 10px 5px var(--box-shadow-color);\n}\n.grid .item.note .content {\n  display: block;\n  justify-self: stretch;\n  margin: 10px;\n  margin-top: 0;\n  padding-right: 5px;\n  word-break: break-word;\n  overflow-y: auto;\n}\n.grid .item.note .content p {\n  padding: 5px 0;\n  margin: 0;\n}\n',
           ''
         ]);
 
@@ -215,10 +215,24 @@
         exports = module.exports = __webpack_require__(
           /*! ../../node_modules/css-loader/dist/runtime/api.js */ './node_modules/css-loader/dist/runtime/api.js'
         )(false);
+        // Imports
+        var getUrl = __webpack_require__(
+          /*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ './node_modules/css-loader/dist/runtime/getUrl.js'
+        );
+        var ___CSS_LOADER_URL___0___ = getUrl(
+          __webpack_require__(/*! ../images/create_note.svg */ './src/images/create_note.svg')
+        );
+        var ___CSS_LOADER_URL___1___ = getUrl(
+          __webpack_require__(/*! ../images/create_folder.svg */ './src/images/create_folder.svg')
+        );
         // Module
         exports.push([
           module.i,
-          '.hello {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-color: #FFF;\n}\n.hello article {\n  display: block;\n  font-size: 2rem;\n}\n.hello .details {\n  font-size: 1rem;\n}\n',
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.hello {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-color: #FFF;\n  overflow: hidden;\n}\n.hello .title {\n  width: 100%;\n  text-align: center;\n  display: block;\n  font-size: 3rem;\n  color: #FFF;\n  padding: 30px 0;\n  font-weight: bold;\n  letter-spacing: 5px;\n  background-color: var(--accent-color);\n}\n.hello .details {\n  font-size: 1rem;\n  padding: 30px 0;\n}\n.hello .button {\n  border-radius: var(--button-border-radius);\n  border: 0;\n  background-color: var(--menu-button-color);\n  margin: 0;\n  padding: 5px 10px;\n  line-height: 20px;\n  cursor: pointer;\n  text-transform: uppercase;\n  font-size: 1.2rem;\n  padding: 8px 100px;\n  transition: all 0.5s;\n}\n.hello .button.menu__create_note:before, .hello .button.menu__create_folder:before {\n  content: "";\n  display: block;\n  width: 20px;\n  height: 20px;\n  float: left;\n  margin-right: 5px;\n}\n.hello .button.menu__create_note:before {\n  background: url(' +
+            ___CSS_LOADER_URL___0___ +
+            ') no-repeat center center;\n  background-size: 80%;\n}\n.hello .button.menu__create_folder:before {\n  background: url(' +
+            ___CSS_LOADER_URL___1___ +
+            ') no-repeat center center;\n  background-size: 80%;\n}\n.hello .button:hover {\n  background-color: var(--menu-button-hover-color);\n}\n.hello .button:hover {\n  background-color: var(--accent-color);\n  padding: 8px 200px;\n  color: #FFF;\n}\n',
           ''
         ]);
 
@@ -266,7 +280,7 @@
         // Module
         exports.push([
           module.i,
-          ':root {\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #AAA;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, 0.75);\n  --menu-color: #DDD;\n  --menu-button-color: #EEE;\n  --menu-button-hover-color: #EAEAEA;\n  --folder-color: #EEE;\n  --folder-hover-color: #DDD;\n}\n\n:root {\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #AAA;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, 0.75);\n  --menu-color: #DDD;\n  --menu-button-color: #EEE;\n  --menu-button-hover-color: #EAEAEA;\n  --folder-color: #EEE;\n  --folder-hover-color: #DDD;\n}\n\n.menu {\n  position: fixed;\n  left: 20px;\n  top: 20px;\n  padding: 10px;\n  background-color: var(--menu-color);\n  border-radius: var(--border-radius);\n  font-size: 0;\n}\n.menu button {\n  border-radius: var(--button-border-radius);\n  border: 0;\n  background-color: var(--menu-button-color);\n  margin: 0;\n  padding: 5px 10px;\n  line-height: 20px;\n  cursor: pointer;\n  font-size: 1rem;\n}\n.menu button.menu__create_note:before, .menu button.menu__create_folder:before {\n  content: "";\n  display: block;\n  width: 20px;\n  height: 20px;\n  float: left;\n  margin-right: 5px;\n}\n.menu button.menu__create_note:before {\n  background: url(' +
+          ':root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n:root {\n  --accent-color: rgb(42, 209, 0);\n  --transition-time: 0.25s;\n  --border-radius: 10px;\n  --button-border-radius: 5px;\n  --grid-gap: 20px;\n  --box-shadow: 0 0 20px 0 var(--box-shadow-color);\n  --box-shadow-color: #aaa;\n  --hover-button-color: rgba(0, 0, 0, 0.1);\n  --inactive-background-color: rgba(255, 255, 255, var(--inactive-background-opacity));\n  --inactive-background-opacity: 0.75;\n  --menu-color: #ddd;\n  --menu-button-color: #eee;\n  --menu-button-hover-color: #eaeaea;\n  --folder-color: #eee;\n  --folder-hover-color: #ddd;\n}\n\n.menu {\n  position: fixed;\n  left: 20px;\n  top: 20px;\n  padding: 10px;\n  background-color: var(--menu-color);\n  border-radius: var(--border-radius);\n  font-size: 0;\n}\n.menu button {\n  border-radius: var(--button-border-radius);\n  border: 0;\n  background-color: var(--menu-button-color);\n  margin: 0;\n  padding: 5px 10px;\n  line-height: 20px;\n  cursor: pointer;\n  font-size: 1rem;\n}\n.menu button.menu__create_note:before, .menu button.menu__create_folder:before {\n  content: "";\n  display: block;\n  width: 20px;\n  height: 20px;\n  float: left;\n  margin-right: 5px;\n}\n.menu button.menu__create_note:before {\n  background: url(' +
             ___CSS_LOADER_URL___0___ +
             ') no-repeat center center;\n  background-size: 80%;\n}\n.menu button.menu__create_folder:before {\n  background: url(' +
             ___CSS_LOADER_URL___1___ +
@@ -890,6 +904,9 @@
         /* harmony import */ var _styles_editor_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/ __webpack_require__.n(
           _styles_editor_css__WEBPACK_IMPORTED_MODULE_0__
         );
+        /* harmony import */ var _scripts_grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! ../scripts/grid */ './src/scripts/grid.js'
+        );
         function _classCallCheck(instance, Constructor) {
           if (!(instance instanceof Constructor)) {
             throw new TypeError('Cannot call a class as a function');
@@ -915,14 +932,45 @@
         var Editor =
           /*#__PURE__*/
           (function() {
-            function Editor(parent) {
+            function Editor(target) {
+              var _this = this;
+
               _classCallCheck(this, Editor);
 
-              this.parent = parent;
+              this.title = target ? target.Title : '';
+              this.content = target ? target.Content : '';
               var templateItem = document.getElementById('template__editor');
               var clone = templateItem.content.cloneNode(true);
               this.editor = clone.querySelector('.editor');
-              this.parent.appendChild(this.editor);
+              this.textarea = this.editor.querySelector('.textarea__note_content');
+              this.inputTitle = this.editor.querySelector('.input__note_title');
+              this.submit = this.editor.querySelector('.submit');
+              this.reject = this.editor.querySelector('.reject');
+
+              if (target) {
+                this.inputTitle.value = this.title;
+                this.textarea.value = this.content;
+                this.textarea.style.color = target.color;
+                this.textarea.style.backgroundColor = target.backgroundColor;
+              }
+
+              this.submit.addEventListener('click', function(e) {
+                if (target) {
+                  target.Title = _this.inputTitle.value;
+                  target.Content = _this.textarea.value;
+                } else {
+                  _scripts_grid__WEBPACK_IMPORTED_MODULE_1__['grid'].AddNote(
+                    _this.inputTitle.value,
+                    _this.textarea.value
+                  );
+                }
+
+                _this.close();
+              });
+              this.reject.addEventListener('click', function(e) {
+                _this.close();
+              });
+              document.body.appendChild(this.editor);
               console.log('Editor created');
             }
 
@@ -930,20 +978,8 @@
               {
                 key: 'close',
                 value: function close() {
-                  this.parent.removeChild(this.editor);
+                  document.body.removeChild(this.editor);
                   this.editor = null;
-                }
-              },
-              {
-                key: 'Handle',
-                get: function get() {
-                  return this.editor;
-                }
-              },
-              {
-                key: 'Parent',
-                get: function get() {
-                  return this.parent;
                 }
               }
             ]);
@@ -997,6 +1033,7 @@
               _classCallCheck(this, Grid);
 
               this.grid = element;
+              this.selected = [];
             }
 
             _createClass(Grid, [
@@ -1004,7 +1041,7 @@
                 key: 'AddNote',
                 value: function AddNote(title, content) {
                   var gridItem = new _GridItem__WEBPACK_IMPORTED_MODULE_0__['GridItem']();
-                  gridItem.createNote(title, content);
+                  gridItem.CreateNote(title, content);
                   this.currentDir.notes.push(gridItem);
                   this.Redraw();
                   console.log('Note added');
@@ -1015,8 +1052,8 @@
                 value: function AddFolder(title) {
                   var gridItem = new _GridItem__WEBPACK_IMPORTED_MODULE_0__['GridItem']();
                   var backFolder = new _GridItem__WEBPACK_IMPORTED_MODULE_0__['GridItem']();
-                  gridItem.createFolder(_GridItem__WEBPACK_IMPORTED_MODULE_0__['FolderType'].folder, title);
-                  backFolder.createFolder(_GridItem__WEBPACK_IMPORTED_MODULE_0__['FolderType'].backFolder, '...');
+                  gridItem.CreateFolder(_GridItem__WEBPACK_IMPORTED_MODULE_0__['FolderType'].folder, title);
+                  backFolder.CreateFolder(_GridItem__WEBPACK_IMPORTED_MODULE_0__['FolderType'].backFolder, '...');
                   gridItem.folders.push(backFolder);
                   this.currentDir.folders.push(gridItem);
                   this.currentDir.folders.sort(function(a, b) {
@@ -1031,11 +1068,11 @@
                 value: function RemoveItem(type, item) {
                   switch (type) {
                     case _GridItem__WEBPACK_IMPORTED_MODULE_0__['ItemType'].note:
-                      delete this.currentDir.notes[this.currentDir.notes.indexOf(item)];
+                      this.currentDir.notes.splice(this.currentDir.notes.indexOf(item), 1);
                       break;
 
                     case _GridItem__WEBPACK_IMPORTED_MODULE_0__['ItemType'].folder:
-                      delete this.currentDir.folders[this.currentDir.folders.indexOf(item)];
+                      this.currentDir.folders.splice(this.currentDir.folders.indexOf(item), 1);
                       break;
                   }
 
@@ -1059,9 +1096,33 @@
                       }
                     });
                   this.currentDir.notes &&
-                    this.currentDir.notes.reverse().forEach(function(n) {
+                    this.currentDir.notes.forEach(function(n) {
                       _this.grid.appendChild(n.Handle);
                     });
+                }
+              },
+              {
+                key: 'isSelected',
+                value: function isSelected(record) {
+                  return this.selected.includes(record);
+                }
+              },
+              {
+                key: 'Select',
+                value: function Select(record) {
+                  this.selected.push(record);
+                }
+              },
+              {
+                key: 'Unselect',
+                value: function Unselect(record) {
+                  this.selected.splice(this.selected.indexOf(record), 1);
+                }
+              },
+              {
+                key: 'UnselectAll',
+                value: function UnselectAll() {
+                  this.selected = [];
                 }
               },
               {
@@ -1078,6 +1139,12 @@
                 set: function set(folder) {
                   this.currentDir = folder;
                   this.Redraw();
+                }
+              },
+              {
+                key: 'Selected',
+                get: function get() {
+                  return this.selected;
                 }
               }
             ]);
@@ -1108,10 +1175,13 @@
         /* harmony import */ var _Utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
           /*! ./Utils */ './src/classes/Utils.js'
         );
-        /* harmony import */ var _scripts_grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+        /* harmony import */ var _classes_Editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! ../classes/Editor */ './src/classes/Editor.js'
+        );
+        /* harmony import */ var _scripts_grid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
           /*! ../scripts/grid */ './src/scripts/grid.js'
         );
-        /* harmony import */ var _scripts_breadcrumbs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+        /* harmony import */ var _scripts_breadcrumbs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
           /*! ../scripts/breadcrumbs */ './src/scripts/breadcrumbs.js'
         );
         function _classCallCheck(instance, Constructor) {
@@ -1176,9 +1246,136 @@
 
             _createClass(GridItem, [
               {
-                key: 'createNote',
-                value: function createNote(title, content) {
+                key: 'itemSelect',
+                value: function itemSelect(e) {
+                  if (e.target.checked) {
+                    _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Select(this);
+                  } else {
+                    _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Unselect(this);
+                  }
+                }
+              },
+              {
+                key: 'itemDragOver',
+                value: function itemDragOver(e) {
+                  e.preventDefault();
+                }
+              },
+              {
+                key: 'itemDragEnd',
+                value: function itemDragEnd(e) {
+                  // grid.Unselect(e.target);
+                }
+              },
+              {
+                key: 'itemDragStart',
+                value: function itemDragStart(e) {
+                  if (this.itemType === ItemType.note || this.folderType === FolderType.folder) {
+                    if (!_scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].isSelected(this))
+                      _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Select(this);
+                  }
+
+                  console.log('Item drag started');
+                }
+              },
+              {
+                key: 'itemOption',
+                value: function itemOption(e) {
+                  e.preventDefault();
+                }
+              },
+              {
+                key: 'itemOpen',
+                value: function itemOpen(e) {
+                  switch (this.itemType) {
+                    case ItemType.folder:
+                      if (this.folderType === FolderType.backFolder) {
+                        _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].CurrentDir = this.prevFolder;
+                        _scripts_breadcrumbs__WEBPACK_IMPORTED_MODULE_3__['breadcrumbs'].RemovePath(this.title);
+                      } else {
+                        _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].CurrentDir = this;
+                        _scripts_breadcrumbs__WEBPACK_IMPORTED_MODULE_3__['breadcrumbs'].AddPath(this.title);
+                      }
+
+                      break;
+
+                    case ItemType.note:
+                      new _classes_Editor__WEBPACK_IMPORTED_MODULE_1__['Editor'](this);
+                      break;
+                  }
+
+                  console.log('Item opened');
+                }
+              },
+              {
+                key: 'itemDrop',
+                value: function itemDrop(e) {
                   var _this = this;
+
+                  e.preventDefault();
+
+                  if (_scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected) {
+                    for (var i = 0; i < _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected.length; i++) {
+                      _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i].checkboxElem.checked = false;
+                      if (_scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i] === this) break;
+
+                      switch (_scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i].itemType) {
+                        case ItemType.note:
+                          switch (this.folderType) {
+                            case FolderType.folder:
+                              this.notes.push(_scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i]);
+                              break;
+
+                            case FolderType.backFolder:
+                              this.prevFolder.notes.push(
+                                _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i]
+                              );
+                              break;
+                          }
+
+                          break;
+
+                        case ItemType.folder:
+                          switch (this.folderType) {
+                            case FolderType.folder:
+                              _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i].folders.forEach(function(
+                                f
+                              ) {
+                                return (f.prevFolder = _this);
+                              });
+                              this.folders.push(_scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i]);
+                              break;
+
+                            case FolderType.backFolder:
+                              _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i].folders.forEach(function(
+                                f
+                              ) {
+                                return (f.prevFolder = _this.prevFolder);
+                              });
+                              this.prevFolder.folders.push(
+                                _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i]
+                              );
+                              break;
+                          }
+
+                          break;
+                      }
+
+                      _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].RemoveItem(
+                        _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i].itemType,
+                        _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].Selected[i]
+                      );
+                    }
+                  }
+
+                  _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].UnselectAll();
+                  console.log('Item dropped');
+                }
+              },
+              {
+                key: 'CreateNote',
+                value: function CreateNote(title, content) {
+                  var _this2 = this;
 
                   this.itemType = ItemType.note;
                   if (title) this.title = title;
@@ -1187,38 +1384,40 @@
                   var clone = templateItem.content.cloneNode(true);
                   this.item = clone.querySelector('.item');
                   this.item.setAttribute('id', this.id);
-                  this.titleElem = this.item.querySelector('.title');
-                  this.contentElem = this.item.querySelector('.content');
-                  this.footerElem = this.item.querySelector('.footer');
+                  this.checkboxElem = clone.querySelector('.checkbox');
+                  this.checkboxLabelElem = clone.querySelector('.checkbox__label');
+                  this.titleSectionElem = clone.querySelector('.title-section');
+                  this.contentElem = clone.querySelector('.content');
+                  this.footerElem = clone.querySelector('.footer');
                   this.item.style.backgroundColor = this.backgroundColor;
                   this.item.style.color = this.color;
-                  this.titleElem.style.borderColor = this.color;
-                  this.titleElem.innerText = this.title;
-                  this.contentElem.innerHTML = '<span>'.concat(this.content, '</span>');
-                  this.item.addEventListener('dragstart', function(e) {
-                    e.dataTransfer.setData(
-                      'text',
-                      JSON.stringify({
-                        type: _this.itemType,
-                        id: _this.id
-                      })
-                    );
+                  this.titleSectionElem.style.borderColor = this.color;
+                  this.checkboxElem.setAttribute('id', 'checkbox_'.concat(this.id));
+                  this.checkboxLabelElem.setAttribute('for', 'checkbox_'.concat(this.id));
+                  this.titleSectionElem.querySelector('.title').innerText = this.title;
+                  this.contentElem.innerHTML = marked(this.content);
+                  this.checkboxElem.addEventListener('change', function(e) {
+                    return _this2.itemSelect(e);
                   });
-                  this.item.addEventListener('dblclick', function() {
-                    alert(_this.Id);
+                  this.item.addEventListener('dragstart', function(e) {
+                    return _this2.itemDragStart(e);
+                  });
+                  this.item.addEventListener('dragend', function(e) {
+                    return _this2.itemDragEnd(e);
+                  });
+                  this.item.addEventListener('dblclick', function(e) {
+                    return _this2.itemOpen(e);
+                  });
+                  this.item.addEventListener('contextmenu', function(e) {
+                    return _this2.itemOption(e);
                   });
                   console.log('Note created');
-                } // folder = {
-                //   title: string;
-                //   prevFolder: GridItem;
-                //   folders: [];
-                //   notes: [];
-                // }
+                }
               },
               {
-                key: 'createFolder',
-                value: function createFolder(folderType, title) {
-                  var _this2 = this;
+                key: 'CreateFolder',
+                value: function CreateFolder(folderType, title) {
+                  var _this3 = this;
 
                   this.itemType = ItemType.folder;
                   this.folderType = folderType;
@@ -1227,65 +1426,47 @@
                   var clone = templateItem.content.cloneNode(true);
                   this.item = clone.querySelector('.item');
                   this.item.setAttribute('id', this.id);
-                  this.item.innerText = this.title;
-                  this.prevFolder = _scripts_grid__WEBPACK_IMPORTED_MODULE_1__['grid'].CurrentDir;
+                  this.checkboxElem = clone.querySelector('.checkbox');
+                  this.checkboxLabelElem = clone.querySelector('.checkbox__label');
+                  this.titleSectionElem = clone.querySelector('.title-section');
+                  this.checkboxElem.setAttribute('id', 'checkbox_'.concat(this.id));
+                  this.checkboxLabelElem.setAttribute('for', 'checkbox_'.concat(this.id));
+                  this.titleSectionElem.querySelector('.title').innerText = this.title;
+
+                  if (this.folderType === FolderType.backFolder) {
+                    this.prevFolder = _scripts_grid__WEBPACK_IMPORTED_MODULE_2__['grid'].CurrentDir;
+                  }
+
                   this.folders = [];
                   this.notes = [];
+
+                  if (this.folderType === FolderType.backFolder) {
+                    this.item.removeAttribute('draggable');
+                    this.titleSectionElem.removeChild(this.checkboxElem);
+                    this.titleSectionElem.removeChild(this.checkboxLabelElem);
+                  } else {
+                    this.checkboxElem.addEventListener('change', function(e) {
+                      return _this3.itemSelect(e);
+                    });
+                  }
+
                   this.item.addEventListener('dragstart', function(e) {
-                    if (_this2.folderType === FolderType.folder) {
-                      e.dataTransfer.setData(
-                        'text',
-                        JSON.stringify({
-                          type: _this2.itemType,
-                          id: _this2.id
-                        })
-                      );
-                    }
+                    return _this3.itemDragStart(e);
+                  });
+                  this.item.addEventListener('dragend', function(e) {
+                    return _this3.itemDragEnd(e);
                   });
                   this.item.addEventListener('dragover', function(e) {
-                    return e.preventDefault();
+                    return _this3.itemDragOver(e);
                   });
                   this.item.addEventListener('drop', function(e) {
-                    e.preventDefault();
-                    var elem = null;
-                    var data = JSON.parse(e.dataTransfer.getData('text'));
-                    console.log(data);
-
-                    switch (data.type) {
-                      case ItemType.note:
-                        elem = _scripts_grid__WEBPACK_IMPORTED_MODULE_1__['grid'].currentDir.notes.filter(function(n) {
-                          return n.Id === data.id;
-                        })[0];
-
-                        _this2.notes.push(elem);
-
-                        break;
-
-                      case ItemType.folder:
-                        elem = _scripts_grid__WEBPACK_IMPORTED_MODULE_1__['grid'].currentDir.folders.filter(function(
-                          f
-                        ) {
-                          return f.Id === data.id;
-                        })[0];
-                        elem.folders.forEach(function(f) {
-                          return (f.prevFolder = _this2);
-                        });
-
-                        _this2.folders.push(elem);
-
-                        break;
-                    }
-
-                    _scripts_grid__WEBPACK_IMPORTED_MODULE_1__['grid'].RemoveItem(data.type, elem);
+                    return _this3.itemDrop(e);
                   });
-                  this.item.addEventListener('dblclick', function() {
-                    if (_this2.folderType === FolderType.backFolder) {
-                      _scripts_grid__WEBPACK_IMPORTED_MODULE_1__['grid'].CurrentDir = _this2.prevFolder;
-                      _scripts_breadcrumbs__WEBPACK_IMPORTED_MODULE_2__['breadcrumbs'].RemovePath(_this2.title);
-                    } else {
-                      _scripts_grid__WEBPACK_IMPORTED_MODULE_1__['grid'].CurrentDir = _this2;
-                      _scripts_breadcrumbs__WEBPACK_IMPORTED_MODULE_2__['breadcrumbs'].AddPath(_this2.title);
-                    }
+                  this.item.addEventListener('dblclick', function(e) {
+                    return _this3.itemOpen(e);
+                  });
+                  this.item.addEventListener('contextmenu', function(e) {
+                    return _this3.itemOption(e);
                   });
                   console.log('Folder created');
                 }
@@ -1312,12 +1493,20 @@
                 key: 'Title',
                 get: function get() {
                   return this.title;
+                },
+                set: function set(title) {
+                  this.title = title;
+                  this.titleSectionElem.querySelector('.title').innerText = this.title;
                 }
               },
               {
                 key: 'Content',
                 get: function get() {
                   return this.content;
+                },
+                set: function set(content) {
+                  this.content = content;
+                  this.contentElem.innerHTML = marked(this.content);
                 }
               }
             ]);
@@ -1545,49 +1734,6 @@
         /***/
       },
 
-    /***/ './src/scripts/editor.js':
-      /*!*******************************!*\
-  !*** ./src/scripts/editor.js ***!
-  \*******************************/
-      /*! exports provided: createEditor, initEditor */
-      /***/ function(module, __webpack_exports__, __webpack_require__) {
-        'use strict';
-        __webpack_require__.r(__webpack_exports__);
-        /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, 'createEditor', function() {
-          return createEditor;
-        });
-        /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, 'initEditor', function() {
-          return initEditor;
-        });
-        /* harmony import */ var _grid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-          /*! ./grid */ './src/scripts/grid.js'
-        );
-        /* harmony import */ var _classes_Editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-          /*! ../classes/Editor */ './src/classes/Editor.js'
-        );
-
-        var editor = null;
-        var createEditor = function createEditor(parent) {
-          editor = new _classes_Editor__WEBPACK_IMPORTED_MODULE_1__['Editor'](parent);
-          initEditor();
-        };
-        var initEditor = function initEditor() {
-          document.getElementById('editor__submit').addEventListener('click', function() {
-            _grid__WEBPACK_IMPORTED_MODULE_0__['grid'].AddNote(
-              editor.Handle.querySelector('.input__note_title').value,
-              editor.Handle.querySelector('.textarea__note_content').value
-            );
-            editor.close();
-          });
-          document.getElementById('editor__close').addEventListener('click', function() {
-            editor.close();
-          });
-          console.log('Editor reinited');
-        };
-
-        /***/
-      },
-
     /***/ './src/scripts/grid.js':
       /*!*****************************!*\
   !*** ./src/scripts/grid.js ***!
@@ -1623,7 +1769,7 @@
           document.body.appendChild(gridElem);
           grid = new _classes_Grid__WEBPACK_IMPORTED_MODULE_1__['Grid'](gridElem);
           grid.CurrentDir = new _classes_GridItem__WEBPACK_IMPORTED_MODULE_2__['GridItem']();
-          grid.CurrentDir.createFolder(_classes_GridItem__WEBPACK_IMPORTED_MODULE_2__['FolderType'].folder, 'root');
+          grid.CurrentDir.CreateFolder(_classes_GridItem__WEBPACK_IMPORTED_MODULE_2__['FolderType'].folder, 'root');
           console.log('Grid inited');
         };
 
@@ -1649,6 +1795,7 @@
         );
 
         var initHello = function initHello() {
+          // localStorage.clear();
           var isVisited = localStorage.getItem('visited');
 
           if (!isVisited) {
@@ -1729,8 +1876,8 @@
         /* harmony import */ var _grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
           /*! ./grid */ './src/scripts/grid.js'
         );
-        /* harmony import */ var _editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-          /*! ./editor */ './src/scripts/editor.js'
+        /* harmony import */ var _classes_Editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+          /*! ../classes/Editor */ './src/classes/Editor.js'
         );
         /* harmony import */ var _classes_Dialog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
           /*! ../classes/Dialog */ './src/classes/Dialog.js'
@@ -1741,7 +1888,7 @@
           var clone = templateMenu.content.cloneNode(true);
           document.body.insertAdjacentElement('afterbegin', clone.querySelector('.menu'));
           document.getElementById('menu__create_note').addEventListener('click', function() {
-            return Object(_editor__WEBPACK_IMPORTED_MODULE_2__['createEditor'])(document.body);
+            return new _classes_Editor__WEBPACK_IMPORTED_MODULE_2__['Editor']();
           });
           document.getElementById('menu__create_folder').addEventListener('click', function() {
             return _classes_Dialog__WEBPACK_IMPORTED_MODULE_3__['Dialog'].Prompt(
