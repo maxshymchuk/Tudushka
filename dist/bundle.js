@@ -1464,12 +1464,6 @@
                 }
               },
               {
-                key: 'itemDragEnd',
-                value: function itemDragEnd(e) {
-                  e.preventDefault();
-                }
-              },
-              {
                 key: 'itemDragStart',
                 value: function itemDragStart(e) {
                   if (this.itemType === ItemType.note || this.folderType === FolderType.folder) {
@@ -1628,10 +1622,15 @@
                   this.checkboxElem.addEventListener('change', function(e) {
                     return _this3.itemSelect(e);
                   });
-                  this.item.addEventListener('dragstart', this.itemDragStart(e));
-                  this.item.addEventListener('dragend', this.itemDragEnd(e));
-                  this.item.addEventListener('dblclick', this.itemOpen(e));
-                  this.item.addEventListener('contextmenu', this.itemOption(e));
+                  this.item.addEventListener('dragstart', function(e) {
+                    return _this3.itemDragStart(e);
+                  });
+                  this.item.addEventListener('dblclick', function(e) {
+                    return _this3.itemOpen(e);
+                  });
+                  this.item.addEventListener('contextmenu', function(e) {
+                    return _this3.itemOption(e);
+                  });
                   _Animation__WEBPACK_IMPORTED_MODULE_4__['Animation'].Animate(this.item, {
                     name: 'bubble',
                     dir: _Animation__WEBPACK_IMPORTED_MODULE_4__['AnimeDir'].Normal,
@@ -1678,9 +1677,6 @@
 
                   this.item.addEventListener('dragstart', function(e) {
                     return _this4.itemDragStart(e);
-                  });
-                  this.item.addEventListener('dragend', function(e) {
-                    return _this4.itemDragEnd(e);
                   });
                   this.item.addEventListener('dragover', function(e) {
                     return _this4.itemDragOver(e);

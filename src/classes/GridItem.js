@@ -55,10 +55,6 @@ export class GridItem {
     e.preventDefault();
   }
 
-  itemDragEnd(e) {
-    e.preventDefault();
-  }
-
   itemDragStart(e) {
     if (this.itemType === ItemType.note || this.folderType === FolderType.folder) {
       if (!grid.isSelected(this)) grid.Select(this);
@@ -172,7 +168,6 @@ export class GridItem {
     this.checkboxElem.addEventListener('change', e => this.itemSelect(e));
 
     this.item.addEventListener('dragstart', e => this.itemDragStart(e));
-    this.item.addEventListener('dragend', e => this.itemDragEnd(e));
     this.item.addEventListener('dblclick', e => this.itemOpen(e));
     this.item.addEventListener('contextmenu', e => this.itemOption(e));
 
@@ -221,7 +216,6 @@ export class GridItem {
     }
 
     this.item.addEventListener('dragstart', e => this.itemDragStart(e));
-    this.item.addEventListener('dragend', e => this.itemDragEnd(e));
     this.item.addEventListener('dragover', e => this.itemDragOver(e));
     this.item.addEventListener('drop', e => this.itemDrop(e));
     this.item.addEventListener('dblclick', e => this.itemOpen(e));
