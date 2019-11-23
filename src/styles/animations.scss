@@ -1,3 +1,13 @@
+@keyframes rotating {
+  0% {
+    transform: rotate(0);
+  }
+  50%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes fading-moving-top {
   0% {
     top: 50px;

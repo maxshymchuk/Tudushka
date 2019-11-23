@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './mixins.scss';
+@import './animations.scss';
 
 .hello {
   display: flex;
@@ -13,6 +14,19 @@
   height: 100%;
   background-color: #fff;
   overflow: hidden;
+  user-select: none;
+  .logo {
+    min-width: 100px;
+    min-height: 100px;
+    padding: 20px;
+    border-radius: 50%;
+    background: url('../images/favicon.svg') no-repeat center center #fff;
+    background-size: 80%;
+    position: relative;
+    top: 30px;
+    z-index: 2;
+    animation: rotating 6s 1s infinite normal ease-in-out;
+  }
   .title {
     width: 100%;
     text-align: center;
