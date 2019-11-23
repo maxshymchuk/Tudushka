@@ -3,7 +3,7 @@ import '../styles/grid.css';
 import { Grid } from '../classes/Grid';
 import { GridItem, FolderType } from '../classes/GridItem';
 
-export let grid = null;
+export let grid;
 
 export const initGrid = () => {
   const gridElem = document.createElement('section');

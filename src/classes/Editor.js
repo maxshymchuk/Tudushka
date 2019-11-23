@@ -53,7 +53,6 @@ export class Editor {
     Animation.Animate(this.note, { name: 'fading-moving-top', dir: AnimeDir.Reverse });
     Animation.Animate(this.editor, { name: 'fading', dir: AnimeDir.Reverse }, () => {
       document.body.removeChild(this.editor);
-      this.editor = null;
     });
   }
 }

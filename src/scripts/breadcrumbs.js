@@ -2,7 +2,7 @@ import '../styles/breadcrumbs.css';
 
 import { Breadcrumbs } from '../classes/Breadcrumbs';
 
-export let breadcrumbs = null;
+export let breadcrumbs;
 
 export const initBreadcrumbs = () => {
   const breadcrumbsElem = document.createElement('span');

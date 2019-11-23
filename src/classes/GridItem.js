@@ -33,10 +33,8 @@ export const FolderType = {
 export class GridItem {
   constructor() {
     this.id = Utils.generateId(16);
-    this.item = null;
     this.title = 'Title';
     this.content = 'Content';
-    this.itemType = null;
 
     const randNum = Utils.rand(0, colors.length - 1);
     this.backgroundColor = colors[randNum][0];

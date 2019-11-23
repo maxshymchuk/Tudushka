@@ -13,7 +13,6 @@ function loadApp(hello) {
   initList();
   Animation.Animate(hello, { name: 'fading', dir: AnimeDir.Reverse }, () => {
     document.body.removeChild(hello);
-    hello = null;
   });
 }
 

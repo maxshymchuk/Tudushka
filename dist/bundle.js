@@ -1177,7 +1177,6 @@
                     },
                     function() {
                       document.body.removeChild(_this2.editor);
-                      _this2.editor = null;
                     }
                   );
                 }
@@ -1441,10 +1440,8 @@
               _classCallCheck(this, GridItem);
 
               this.id = _Utils__WEBPACK_IMPORTED_MODULE_0__['Utils'].generateId(16);
-              this.item = null;
               this.title = 'Title';
               this.content = 'Content';
-              this.itemType = null;
               var randNum = _Utils__WEBPACK_IMPORTED_MODULE_0__['Utils'].rand(0, colors.length - 1);
               this.backgroundColor = colors[randNum][0];
               this.color = colors[randNum][1];
@@ -2069,7 +2066,7 @@
           /*! ../classes/Breadcrumbs */ './src/classes/Breadcrumbs.js'
         );
 
-        var breadcrumbs = null;
+        var breadcrumbs;
         var initBreadcrumbs = function initBreadcrumbs() {
           var breadcrumbsElem = document.createElement('span');
           breadcrumbsElem.setAttribute('class', 'breadcrumbs');
@@ -2136,7 +2133,7 @@
           /*! ../classes/GridItem */ './src/classes/GridItem.js'
         );
 
-        var grid = null;
+        var grid;
         var initGrid = function initGrid() {
           var gridElem = document.createElement('section');
           gridElem.setAttribute('class', 'grid');
@@ -2197,7 +2194,6 @@
             },
             function() {
               document.body.removeChild(hello);
-              hello = null;
             }
           );
         }
@@ -2281,7 +2277,7 @@
           /*! ../classes/List */ './src/classes/List.js'
         );
 
-        var list = null;
+        var list;
         var initList = function initList() {
           list = new _classes_List__WEBPACK_IMPORTED_MODULE_1__['List']();
         };
