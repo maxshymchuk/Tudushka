@@ -33,7 +33,7 @@ export class List {
 
   Show() {
     this.list.forEach(i => {
-      this.listElem.appendChild(i.Handle);
+      this.listElem.appendChild(i.Element);
     });
     document.body.appendChild(this.listSectionElem);
 

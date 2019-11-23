@@ -228,7 +228,7 @@ export class GridItem {
     console.log(`Folder created - ${this.folderType}`);
   }
 
-  get Handle() {
+  get Element() {
     return this.item;
   }
 

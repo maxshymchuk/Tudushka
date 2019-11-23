@@ -1287,16 +1287,16 @@
                   this.currentDir.folders &&
                     this.currentDir.folders.forEach(function(f) {
                       if (f.folderType === _GridItem__WEBPACK_IMPORTED_MODULE_0__['FolderType'].backFolder) {
-                        f.Handle.style.backgroundImage = 'url(./src/images/back.svg)';
+                        f.Element.style.backgroundImage = 'url(./src/images/back.svg)';
 
-                        _this.grid.insertAdjacentElement('afterbegin', f.Handle);
+                        _this.grid.insertAdjacentElement('afterbegin', f.Element);
                       } else {
-                        _this.grid.appendChild(f.Handle);
+                        _this.grid.appendChild(f.Element);
                       }
                     });
                   this.currentDir.notes &&
                     this.currentDir.notes.forEach(function(n) {
-                      _this.grid.appendChild(n.Handle);
+                      _this.grid.appendChild(n.Element);
                     });
                 }
               },
@@ -1325,7 +1325,7 @@
                 }
               },
               {
-                key: 'Handle',
+                key: 'Element',
                 get: function get() {
                   return this.grid;
                 }
@@ -1700,7 +1700,7 @@
                 }
               },
               {
-                key: 'Handle',
+                key: 'Element',
                 get: function get() {
                   return this.item;
                 }
@@ -1838,7 +1838,7 @@
                   var _this2 = this;
 
                   this.list.forEach(function(i) {
-                    _this2.listElem.appendChild(i.Handle);
+                    _this2.listElem.appendChild(i.Element);
                   });
                   document.body.appendChild(this.listSectionElem);
                   _classes_Animation__WEBPACK_IMPORTED_MODULE_0__['Animation'].Animate(

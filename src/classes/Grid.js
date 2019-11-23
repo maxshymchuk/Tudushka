@@ -49,19 +49,19 @@ export class Grid {
     this.currentDir.folders &&
       this.currentDir.folders.forEach(f => {
         if (f.folderType === FolderType.backFolder) {
-          f.Handle.style.backgroundImage = 'url(./src/images/back.svg)';
-          this.grid.insertAdjacentElement('afterbegin', f.Handle);
+          f.Element.style.backgroundImage = 'url(./src/images/back.svg)';
+          this.grid.insertAdjacentElement('afterbegin', f.Element);
         } else {
-          this.grid.appendChild(f.Handle);
+          this.grid.appendChild(f.Element);
         }
       });
     this.currentDir.notes &&
       this.currentDir.notes.forEach(n => {
-        this.grid.appendChild(n.Handle);
+        this.grid.appendChild(n.Element);
       });
   }
 
-  get Handle() {
+  get Element() {
     return this.grid;
   }
 
