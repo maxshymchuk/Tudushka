@@ -1799,6 +1799,7 @@
               this.listElem = clone.querySelector('.list');
               this.reject = clone.querySelector('.reject');
               this.reject.addEventListener('click', function() {
+                _this.listSectionElem.style.overflowY = 'hidden';
                 _classes_Animation__WEBPACK_IMPORTED_MODULE_0__['Animation'].Animate(
                   _this.listSectionElem,
                   {
@@ -1806,7 +1807,6 @@
                     dir: _classes_Animation__WEBPACK_IMPORTED_MODULE_0__['AnimeDir'].Reverse
                   },
                   function() {
-                    _this.listSectionElem.style.overflowY = 'hidden';
                     document.body.removeChild(_this.listSectionElem);
                   }
                 );

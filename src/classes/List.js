@@ -13,8 +13,8 @@ export class List {
     this.reject = clone.querySelector('.reject');
 
     this.reject.addEventListener('click', () => {
+      this.listSectionElem.style.overflowY = 'hidden';
       Animation.Animate(this.listSectionElem, { name: 'fading', dir: AnimeDir.Reverse }, () => {
-        this.listSectionElem.style.overflowY = 'hidden';
         document.body.removeChild(this.listSectionElem);
       });
       Animation.Animate(this.listElem, { name: 'fading-moving-top', dir: AnimeDir.Reverse });
