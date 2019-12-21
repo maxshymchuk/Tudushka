@@ -9,6 +9,14 @@
     <title>Tudushka</title>
   </head>
   <body>
+    <header>
+      <section class="menu">
+        <button id="menu__create_note" class="menu__create_note" type="button">New note</button>
+        <button id="menu__create_folder" class="menu__create_folder" type="button">New folder</button>
+        <button id="menu__open_completed" class="menu__open_completed" type="button">Completed</button>
+      </section>
+      <span class="breadcrumbs" id="breadcrumbs"></span>
+    </header>
     <template id="template__hello">
       <div class="hello">
         <div class="logo"></div>
@@ -25,13 +33,6 @@
       <section class="list-section">
         <button class="reject"></button>
         <section class="list"></section>
-      </section>
-    </template>
-    <template id="template__menu">
-      <section class="menu">
-        <button id="menu__create_note" class="menu__create_note" type="button">New note</button>
-        <button id="menu__create_folder" class="menu__create_folder" type="button">New folder</button>
-        <button id="menu__open_completed" class="menu__open_completed" type="button">Completed</button>
       </section>
     </template>
     <template id="template__grid_folder">

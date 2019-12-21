@@ -2,13 +2,11 @@
 @import './mixins.scss';
 
 .menu {
-  position: fixed;
-  top: 20px;
-  margin-left: 20px;
-  padding: 10px;
-  background-color: var(--menu-color);
-  border-radius: var(--border-radius);
-  font-size: 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  opacity: 0;
+  padding: 20px;
   z-index: 1;
   button {
     @include button-menu;

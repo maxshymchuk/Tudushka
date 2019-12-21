@@ -4,13 +4,16 @@ export class Breadcrumbs {
   constructor(element) {
     this.path = ['root'];
     this.element = element;
-    Animation.Animate(this.element, { name: 'fading-moving-left', dir: AnimeDir.Normal });
+    Animation.Animate(this.element, { name: 'fading-moving-left', dir: AnimeDir.Normal }, () => {
+      this.element.style.opacity = 1;
+    });
     this.Redraw();
   }
 
   AddPath(path) {
     this.path.push(path);
     this.Redraw();
+
     Animation.Animate(this.element, {
       name: 'bubble',
       dir: AnimeDir.Normal,
@@ -21,6 +24,7 @@ export class Breadcrumbs {
   RemovePath() {
     this.path.pop();
     this.Redraw();
+
     Animation.Animate(this.element, {
       name: 'bubble',
       dir: AnimeDir.Normal,

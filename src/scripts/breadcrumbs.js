@@ -5,11 +5,7 @@ import { Breadcrumbs } from '../classes/Breadcrumbs';
 export let breadcrumbs;
 
 export const initBreadcrumbs = () => {
-  const breadcrumbsElem = document.createElement('span');
-  breadcrumbsElem.setAttribute('class', 'breadcrumbs');
-  breadcrumbsElem.setAttribute('id', 'breadcrumbs');
-
-  document.body.insertAdjacentElement('afterbegin', breadcrumbsElem);
+  const breadcrumbsElem = document.getElementById('breadcrumbs');
 
   breadcrumbs = new Breadcrumbs(breadcrumbsElem);
 };
