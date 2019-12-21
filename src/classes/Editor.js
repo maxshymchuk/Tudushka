@@ -27,7 +27,7 @@ export class Editor {
       this.textarea.style.backgroundColor = target.backgroundColor;
     }
 
-    this.submit.addEventListener('click', e => {
+    this.submit.addEventListener('click', () => {
       if (target) {
         target.Title = this.inputTitle.value;
         target.Content = this.textarea.value;
@@ -37,7 +37,7 @@ export class Editor {
       this.close();
     });
 
-    this.reject.addEventListener('click', e => {
+    this.reject.addEventListener('click', () => {
       this.close();
     });
 

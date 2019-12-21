@@ -1,4 +1,6 @@
 .editorconfig
+*.css
+dist/
 
 ### Node ###
 # Logs
