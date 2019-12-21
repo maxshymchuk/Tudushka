@@ -17,6 +17,7 @@ export class List {
       Animation.Animate(this.listSectionElem, { name: 'fading', dir: AnimeDir.Reverse }, () => {
         document.body.removeChild(this.listSectionElem);
       });
+
       Animation.Animate(this.listElem, { name: 'fading-moving-top', dir: AnimeDir.Reverse });
     });
   }

@@ -53,7 +53,7 @@ export class GridItem {
     e.preventDefault();
   }
 
-  itemDragStart(e) {
+  itemDragStart() {
     if (this.itemType === ItemType.note || this.folderType === FolderType.folder) {
       if (!grid.isSelected(this)) grid.Select(this);
     }
@@ -61,11 +61,17 @@ export class GridItem {
     console.log('Item drag started');
   }
 
+  itemDragEnd() {
+    grid.UnselectAll();
+
+    console.log('Item drag ended');
+  }
+
   itemOption(e) {
     e.preventDefault();
   }
 
-  itemOpen(e) {
+  itemOpen() {
     switch (this.itemType) {
       case ItemType.folder:
         if (this.folderType === FolderType.backFolder) {
@@ -84,8 +90,9 @@ export class GridItem {
     console.log('Item opened');
   }
 
-  itemComplete(e) {
+  itemComplete() {
     list.Add(this);
+
     Animation.Animate(this.item, { name: 'disappearing', dir: AnimeDir.Normal }, () => {
       grid.RemoveItem(this);
     });
@@ -97,7 +104,6 @@ export class GridItem {
     e.preventDefault();
     if (grid.Selected) {
       for (let i = 0; i < grid.Selected.length; i++) {
-        grid.Selected[i].checkboxElem.checked = false;
         if (grid.Selected[i] === this) continue;
         switch (grid.Selected[i].itemType) {
           case ItemType.note:
@@ -162,11 +168,16 @@ export class GridItem {
     this.titleSectionElem.querySelector('.title').innerText = this.title;
     this.contentElem.innerHTML = marked(this.content);
 
-    this.completeElem.addEventListener('click', e => this.itemComplete(e));
+    this.completeElem.addEventListener('click', e => {
+      e.stopPropagation();
+      this.itemComplete();
+    });
     this.checkboxElem.addEventListener('change', e => this.itemSelect(e));
+    this.checkboxLabelElem.addEventListener('dblclick', e => e.stopPropagation());
 
-    this.item.addEventListener('dragstart', e => this.itemDragStart(e));
-    this.item.addEventListener('dblclick', e => this.itemOpen(e));
+    this.item.addEventListener('dragstart', () => this.itemDragStart());
+    this.item.addEventListener('dragend', () => this.itemDragEnd());
+    this.item.addEventListener('dblclick', () => this.itemOpen());
     this.item.addEventListener('contextmenu', e => this.itemOption(e));
 
     Animation.Animate(this.item, {
@@ -211,12 +222,14 @@ export class GridItem {
       this.titleSectionElem.removeChild(this.checkboxLabelElem);
     } else {
       this.checkboxElem.addEventListener('change', e => this.itemSelect(e));
+      this.checkboxLabelElem.addEventListener('dblclick', e => e.stopPropagation());
     }
 
-    this.item.addEventListener('dragstart', e => this.itemDragStart(e));
-    this.item.addEventListener('dragover', e => this.itemDragOver(e));
+    this.item.addEventListener('dragstart', () => this.itemDragStart());
     this.item.addEventListener('drop', e => this.itemDrop(e));
-    this.item.addEventListener('dblclick', e => this.itemOpen(e));
+    this.item.addEventListener('dragover', e => this.itemDragOver(e));
+    this.item.addEventListener('dragend', () => this.itemDragEnd());
+    this.item.addEventListener('dblclick', () => this.itemOpen());
     this.item.addEventListener('contextmenu', e => this.itemOption(e));
 
     Animation.Animate(this.item, {

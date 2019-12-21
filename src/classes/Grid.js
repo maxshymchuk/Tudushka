@@ -83,14 +83,18 @@ export class Grid {
   }
 
   Select(record) {
+    record.Element.querySelector('.checkbox').checked = true;
     this.selected.push(record);
   }
 
   Unselect(record) {
+    record.Element.querySelector('.checkbox').checked = false;
     this.selected.splice(this.selected.indexOf(record), 1);
   }
 
   UnselectAll() {
-    this.selected = [];
+    for (let record of this.selected) {
+      this.Unselect(record);
+    }
   }
 }
