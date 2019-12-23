@@ -11,7 +11,7 @@ export const initGrid = () => {
   gridElem.setAttribute('class', 'grid');
   gridElem.setAttribute('id', 'grid');
 
-  document.body.appendChild(gridElem);
+  document.querySelector('main').appendChild(gridElem);
 
   grid = new Grid(gridElem);
   grid.CurrentDir = new GridItem();

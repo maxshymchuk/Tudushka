@@ -3,10 +3,11 @@
 
 .menu {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
   opacity: 0;
   button {
     @include button-menu;
-    float: left;
     margin-bottom: 10px;
     font-size: 1rem;
     &.menu__open_completed {

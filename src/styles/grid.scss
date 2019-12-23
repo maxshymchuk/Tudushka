@@ -4,8 +4,7 @@
   display: grid;
   justify-content: center;
   padding: 20px;
-  padding-top: 110px;
-  grid: 240px / repeat(auto-fill, 200px);
+  grid: 240px / repeat(auto-fit, 200px);
   grid-gap: var(--grid-gap);
   user-select: none;
   position: relative;
