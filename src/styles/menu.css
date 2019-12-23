@@ -37,21 +37,18 @@
 }
 
 .menu {
-  display: flex;
-  flex-wrap: wrap;
   position: relative;
   opacity: 0;
-  padding: 20px;
-  z-index: 1;
 }
 .menu button {
   border-radius: var(--button-border-radius);
   border: 0;
   background-color: var(--menu-button-color);
-  margin: 5px 0;
   padding: 5px 10px;
   line-height: 20px;
   cursor: pointer;
+  float: left;
+  margin-bottom: 10px;
   font-size: 1rem;
 }
 .menu button.menu__create_note:before,

@@ -1,13 +1,13 @@
 @import './variables.scss';
 
 .breadcrumbs {
-  display: inline-block;
   position: relative;
+  top: 10px;
+  float: left;
+  clear: both;
   opacity: 0;
-  margin: 0 20px;
   line-height: 20px;
   border-radius: var(--border-radius);
   padding: 0 10px;
   background-color: var(--menu-color);
-  z-index: 1;
 }

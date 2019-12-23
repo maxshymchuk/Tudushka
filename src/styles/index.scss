@@ -15,6 +15,14 @@ body {
   font-family: 'Zilla Slab', serif;
 }
 
+header {
+  position: fixed;
+  height: 0;
+  background-color: red;
+  margin: 20px;
+  z-index: 2;
+}
+
 input,
 button,
 textarea {

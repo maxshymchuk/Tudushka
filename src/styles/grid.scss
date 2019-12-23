@@ -3,7 +3,8 @@
 .grid {
   display: grid;
   justify-content: center;
-  padding: 25px 20px;
+  padding: 20px;
+  padding-top: 110px;
   grid: 240px / repeat(auto-fill, 200px);
   grid-gap: var(--grid-gap);
   user-select: none;

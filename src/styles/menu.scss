@@ -2,14 +2,12 @@
 @import './mixins.scss';
 
 .menu {
-  display: flex;
-  flex-wrap: wrap;
   position: relative;
   opacity: 0;
-  padding: 20px;
-  z-index: 1;
   button {
     @include button-menu;
+    float: left;
+    margin-bottom: 10px;
     font-size: 1rem;
     &.menu__open_completed {
       background-color: var(--accent-color);
