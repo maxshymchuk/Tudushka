@@ -19,10 +19,12 @@ body {
 }
 
 header {
+  opacity: 0;
   box-shadow: var(--box-shadow);
   padding: 20px;
   position: relative;
   z-index: 1;
+  transition: opacity var(--transition-time);
 }
 
 main {

@@ -65,6 +65,16 @@
     opacity: 1;
   }
 }
+@keyframes fading-moving-bottom {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
 @keyframes fading {
   0% {
     opacity: 0;

@@ -40,7 +40,6 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  opacity: 0;
 }
 .menu button {
   border-radius: var(--button-border-radius);

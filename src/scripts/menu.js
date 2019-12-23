@@ -7,7 +7,8 @@ import { Animation, AnimeDir } from '../classes/Animation';
 import { list } from './list';
 
 export const initMenu = () => {
-  const menu = document.querySelector('header .menu');
+  const header = document.querySelector('header');
+  const menu = header.querySelector('.menu');
 
   menu.querySelector('.menu__create_note').addEventListener('click', () => new Editor());
   menu
@@ -15,8 +16,8 @@ export const initMenu = () => {
     .addEventListener('click', () => Dialog.Prompt('Folder name:', grid.AddFolder.bind(grid)));
   menu.querySelector('.menu__open_completed').addEventListener('click', () => list.Show());
 
-  Animation.Animate(menu, { name: 'fading-moving-left', dir: AnimeDir.Normal }, () => {
-    menu.style.opacity = 1;
+  Animation.Animate(header, { name: 'fading-moving-bottom', dir: AnimeDir.Normal }, () => {
+    header.style.opacity = 1;
   });
 
   console.log('Menu inited');

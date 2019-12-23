@@ -5,7 +5,6 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  opacity: 0;
   button {
     @include button-menu;
     margin-bottom: 10px;
