@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src -d build",
-    "webpack": "npx webpack",
+    "webpack": "set \"NODE_OPTIONS=--openssl-legacy-provider\" && npx webpack",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "npx eslint src/**/*.js",
     "watch-css": "sass --watch --no-source-map ./src/styles/grid.scss:./src/styles/grid.css ./src/styles/hello.scss:./src/styles/hello.css ./src/styles/index.scss:./src/styles/index.css ./src/styles/menu.scss:./src/styles/menu.css ./src/styles/editor.scss:./src/styles/editor.css ./src/styles/dialog.scss:./src/styles/dialog.css ./src/styles/breadcrumbs.scss:./src/styles/breadcrumbs.css ./src/styles/list.scss:./src/styles/list.css --watch"
@@ -32,9 +32,11 @@
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@babel/preset-env": "^7.7.1",
     "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^3.2.0",
     "eslint": "^6.6.0",
     "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^4.5.2",
     "http-server": "^0.11.1",
     "husky": "^3.0.9",
     "prettier": "1.19.1",

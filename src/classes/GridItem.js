@@ -4,6 +4,7 @@ import { grid } from '../scripts/grid';
 import { breadcrumbs } from '../scripts/breadcrumbs';
 import { Animation, AnimeDir } from './Animation';
 import { list } from '../scripts/list';
+import { marked } from '../marked.min.js';
 
 const colors = [
   ['#EDE604', '#000'],
@@ -166,7 +167,7 @@ export class GridItem {
     this.checkboxLabelElem.setAttribute('for', `checkbox_${this.id}`);
 
     this.titleSectionElem.querySelector('.title').innerText = this.title;
-    this.contentElem.innerHTML = marked(this.content);
+    this.contentElem.innerHTML = marked.parse(this.content);
 
     this.completeElem.addEventListener('click', e => {
       e.stopPropagation();
@@ -268,6 +269,6 @@ export class GridItem {
 
   set Content(content) {
     this.content = content;
-    this.contentElem.innerHTML = marked(this.content);
+    this.contentElem.innerHTML = marked.parse(this.content);
   }
 }

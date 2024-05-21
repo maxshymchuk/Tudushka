@@ -12,6 +12,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
+  "ignorePatterns": ["marked.min.js"],
   "rules": {
     "no-undef": "warn",
     "no-unused-vars": "warn"
