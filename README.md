@@ -1,11 +1,5 @@
 # Tudushka Project
 
-### Planned
-
-- Saving in local storage
-- Deleting of grid items
-- [ ! ] User registration
-
 ### Features
 
 - Markdown support
